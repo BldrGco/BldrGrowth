@@ -7,3 +7,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Show statements when scrolling past Hero
+window.addEventListener('scroll', () => {
+    const statements = document.getElementById('statements');
+    const hero = document.getElementById('hero');
+    const heroBottom = hero.getBoundingClientRect().bottom;
+
+    if (heroBottom <= 0) {
+        statements.classList.add('visible');
+    } else {
+        statements.classList.remove('visible');
+    }
+});
