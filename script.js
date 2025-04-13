@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
     const heroHeight = hero.offsetHeight;
 
-    if (scrollPosition > 100 && scrollPosition < heroHeight * 0.8) {
+    if (scrollPosition > 50 && scrollPosition < heroHeight * 0.8) {
         statements.classList.add('visible');
     } else {
         statements.classList.remove('visible');
