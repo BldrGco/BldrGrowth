@@ -62,29 +62,27 @@ nav ul li a:hover {
 #hero {
     background-color: #1a1a1a;
     color: #fff;
-    text-align: center;
-    height: 150vh; /* Extended to allow statements to appear */
+    height: 150vh; /* Extended for statements */
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
     padding: 0;
-    position: relative;
 }
 
-#hero .container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.hero-content {
+    width: 50%;
+    padding-left: 40px;
+    margin-top: 20vh; /* Offset for fixed header */
 }
 
 #hero h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
+    font-size: 5rem; /* Larger for impact */
     font-weight: 400;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-align: left;
 }
 
 #hero .title-black {
@@ -98,18 +96,25 @@ nav ul li a:hover {
 
 #hero p {
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+    max-width: 500px;
+}
+
+#hero .cta-button {
+    display: inline-block;
+    text-align: center;
 }
 
 /* Statements */
 .statements {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 40px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -120,12 +125,12 @@ nav ul li a:hover {
 
 .statement-item {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem; /* Larger but balanced */
     font-weight: 400;
     color: #fff;
     text-align: right;
     letter-spacing: 1px;
-    max-width: 300px;
+    max-width: 400px; /* Wider for balance */
 }
 
 /* CTA Button with Green Fill and Purple-Pink Gradient Outline */
@@ -292,24 +297,31 @@ footer p {
     }
 
     #hero {
-        height: 120vh; /* Slightly shorter for mobile */
+        height: 120vh;
+    }
+
+    .hero-content {
+        width: 80%;
+        padding-left: 20px;
+        margin-top: 15vh;
     }
 
     #hero h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     #hero p {
         font-size: 1.2rem;
+        margin-bottom: 30px;
     }
 
     .statements {
-        right: 10px;
+        right: 20px;
     }
 
     .statement-item {
-        font-size: 1.4rem;
-        max-width: 200px;
+        font-size: 1.6rem;
+        max-width: 250px;
     }
 
     #services h2 {
