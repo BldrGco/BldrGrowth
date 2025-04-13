@@ -136,7 +136,7 @@ nav ul li a:hover {
 /* CTA Button with Two-Tone Green Fill and Purple-Pink Gradient Outline */
 .cta-button {
     display: inline-block;
-    background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600); /* Two-tone green fill */
+    background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600);
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -146,7 +146,7 @@ nav ul li a:hover {
     overflow: hidden;
     z-index: 1;
     transition: background 0.3s;
-    border: 2px solid transparent; /* For gradient outline */
+    border: 2px solid transparent;
 }
 
 .cta-button::before {
@@ -156,14 +156,14 @@ nav ul li a:hover {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #800080, #ff69b4, #800080, #ff69b4); /* Purple-pink outline */
+    background: linear-gradient(45deg, #800080, #ff69b4, #800080, #ff69b4);
     z-index: -1;
     border-radius: 50px;
     animation: gradient-move 3s linear infinite;
 }
 
 .cta-button:hover {
-    background: linear-gradient(45deg, #00b300, #004d00, #00b300, #004d00); /* Slightly darker green gradient on hover */
+    background: linear-gradient(45deg, #00b300, #004d00, #00b300, #004d00);
 }
 
 @keyframes gradient-move {
@@ -177,8 +177,9 @@ nav ul li a:hover {
 
 /* Services Section */
 #services {
-    padding: 80px 0;
+    padding: 100px 0; /* Increased padding for length */
     background-color: #fff;
+    min-height: 120vh; /* Extended height */
 }
 
 #services h2 {
@@ -195,6 +196,7 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    margin-bottom: 60px;
 }
 
 .service-card {
@@ -225,6 +227,68 @@ nav ul li a:hover {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     opacity: 0.9;
+}
+
+/* Testimonials */
+.testimonials {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+.testimonials .title-black {
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.testimonials .title-white {
+    color: #fff;
+}
+
+.testimonials-track {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+}
+
+.testimonial-item {
+    flex: 0 0 auto;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    margin: 0 15px;
+    border-radius: 10px;
+    min-width: 300px;
+    animation: slide-left 20s linear infinite;
+}
+
+.testimonial-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-item cite {
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Newsletter Section */
@@ -325,12 +389,25 @@ footer p {
         max-width: 250px;
     }
 
+    #services {
+        padding: 60px 0;
+        min-height: 100vh;
+    }
+
     #services h2 {
         font-size: 2rem;
     }
 
-    .service-card h3 {
-        font-size: 1.8rem;
+    .services-grid {
+        margin-bottom: 40px;
+    }
+
+    .testimonials h2 {
+        font-size: 3rem;
+    }
+
+    .testimonial-item {
+        min-width: 250px;
     }
 
     .newsletter-embed iframe {
