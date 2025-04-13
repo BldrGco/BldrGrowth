@@ -133,11 +133,10 @@ nav ul li a:hover {
     max-width: 400px;
 }
 
-/* CTA Button with Two-Tone Green Fill and Purple-Pink Gradient Outline */
+/* CTA Button */
 .cta-button {
     display: inline-block;
-    background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600);
-    color: #fff;
+    color: #fff; /* Default text color */
     padding: 15px 30px;
     text-decoration: none;
     font-weight: 600;
@@ -145,7 +144,7 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
     border: 2px solid transparent;
 }
 
@@ -156,14 +155,28 @@ nav ul li a:hover {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #800080, #ff69b4, #800080, #ff69b4);
+    background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600); /* Two-tone green outline */
     z-index: -1;
     border-radius: 50px;
     animation: gradient-move 3s linear infinite;
 }
 
-.cta-button:hover {
-    background: linear-gradient(45deg, #00b300, #004d00, #00b300, #004d00);
+#hero .hero-button {
+    background: #fff; /* White fill for black background */
+    color: #000; /* Black text for contrast */
+}
+
+#hero .hero-button:hover {
+    background: #e6e6e6; /* Slightly darker white on hover */
+}
+
+#contact .contact-button {
+    background: #000; /* Black fill for white background */
+    color: #fff; /* White text for contrast */
+}
+
+#contact .contact-button:hover {
+    background: #333; /* Slightly lighter black on hover */
 }
 
 @keyframes gradient-move {
@@ -250,7 +263,7 @@ nav ul li a:hover {
 
 .testimonials .title-white {
     color: #fff;
-    -webkit-text-stroke: 2px #000; /* Black outline for Testimonials & Reviews */
+    -webkit-text-stroke: 2px #000;
 }
 
 .testimonials-track {
@@ -408,7 +421,7 @@ footer p {
     }
 
     .testimonials .title-white {
-        -webkit-text-stroke: 1px #000; /* Thinner outline for mobile */
+        -webkit-text-stroke: 1px #000;
     }
 
     .testimonial-item {
