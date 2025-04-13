@@ -259,121 +259,116 @@ nav ul li a:hover {
     max-width: 400px;
 }
 
-/* Services Section */
+/* Services Teaser Section (index.html) */
 #services {
-    padding: 100px 0;
+    padding: 80px 0;
     background-color: #fff;
-    min-height: 120vh;
+    text-align: center;
 }
 
 #services h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3rem;
     font-weight: 400;
-    text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #1a1a1a;
     letter-spacing: 2px;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
+#services p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.service-card {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+#services .service-button {
+    background: #fff;
+    color: #000;
+    border: 2px solid transparent;
 }
 
-.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+#services .service-button:hover {
+    background: #e6faff;
+    box-shadow: 0 0 10px rgba(51, 255, 51, 0.6);
 }
 
-.service-card h3 {
+#services .service-button:active {
+    background: #ccffcc;
+    box-shadow: 0 0 15px rgba(51, 255, 51, 0.8);
+}
+
+/* Services Page */
+.services-page {
+    padding: 100px 0;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.services-page h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 400;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.service-card p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-/* Testimonials */
-.testimonials {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.testimonials h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 400;
     line-height: 1.1;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    text-align: center;
 }
 
-.testimonials .title-black {
+.services-page .title-black {
     color: #000;
     -webkit-text-stroke: 2px #fff;
 }
 
-.testimonials .title-white {
+.services-page .title-white {
     color: #fff;
     -webkit-text-stroke: 2px #000;
 }
 
-.testimonials-track {
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    position: relative;
-}
-
-.testimonial-item {
-    flex: 0 0 auto;
-    background-color: #1a1a1a;
-    color: #fff;
+.service-block {
+    max-width: 500px;
+    margin-bottom: 40px;
     padding: 20px;
-    margin: 0 15px;
+    background: #f9f9f9;
     border-radius: 10px;
-    min-width: 300px;
-    animation: slide-left 20s linear infinite;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.testimonial-item p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+.service-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 204, 0, 0.2);
 }
 
-.testimonial-item cite {
-    font-size: 0.9rem;
-    font-style: italic;
-    opacity: 0.8;
+.service-block h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
-@keyframes slide-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+.service-block p {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.services-page .service-button {
+    background: #fff;
+    color: #000;
+    border: 2px solid transparent;
+}
+
+.services-page .service-button:hover {
+    background: #e6faff;
+    box-shadow: 0 0 10px rgba(51, 255, 51, 0.6);
+}
+
+.services-page .service-button:active {
+    background: #ccffcc;
+    box-shadow: 0 0 15px rgba(51, 255, 51, 0.8);
 }
 
 /* About Page */
@@ -547,6 +542,27 @@ nav ul li a:hover {
     box-shadow: 0 0 15px rgba(51, 255, 51, 0.8);
 }
 
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
 /* Footer */
 footer {
     background-color: #1a1a1a;
@@ -670,27 +686,36 @@ footer {
 
     #services {
         padding: 60px 0;
-        min-height: 100vh;
     }
 
     #services h2 {
         font-size: 2rem;
     }
 
-    .services-grid {
-        margin-bottom: 40px;
+    #services p {
+        font-size: 1rem;
     }
 
-    .testimonials h2 {
-        font-size: 3rem;
+    .services-page {
+        padding: 60px 0;
     }
 
-    .testimonials .title-white {
-        -webkit-text-stroke: 1px #000;
+    .services-page h2 {
+        font-size: 4rem;
     }
 
-    .testimonial-item {
-        min-width: 250px;
+    .service-block {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .service-block h3 {
+        font-size: 2rem;
+    }
+
+    .service-block p {
+        font-size: 1rem;
     }
 
     .about-page {
