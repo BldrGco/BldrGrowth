@@ -110,34 +110,21 @@ nav ul li a:hover {
 /* CTA Button */
 .cta-button {
     display: inline-block;
-    color: #fff; /* Default text color */
     padding: 15px 30px;
     text-decoration: none;
     font-weight: 600;
     border-radius: 50px;
     position: relative;
-    overflow: hidden;
-    z-index: 1;
     transition: background 0.3s, color 0.3s;
-    border: 2px solid transparent;
-}
-
-.cta-button::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600); /* Two-tone green outline */
-    z-index: -1;
-    border-radius: 50px;
-    animation: gradient-move 3s linear infinite;
 }
 
 #hero .hero-button {
-    background: #fff; /* White fill for black background */
-    color: #000; /* Black text for contrast */
+    background: #fff; /* White fill */
+    color: #000; /* Black text */
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600) 1;
+    border-image-slice: 1;
+    animation: gradient-move 3s linear infinite;
 }
 
 #hero .hero-button:hover {
@@ -145,8 +132,12 @@ nav ul li a:hover {
 }
 
 #contact .contact-button {
-    background: #000; /* Black fill for white background */
-    color: #fff; /* White text for contrast */
+    background: #000; /* Black fill */
+    color: #fff; /* White text */
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600) 1;
+    border-image-slice: 1;
+    animation: gradient-move 3s linear infinite;
 }
 
 #contact .contact-button:hover {
@@ -155,10 +146,10 @@ nav ul li a:hover {
 
 @keyframes gradient-move {
     0% {
-        background-position: 0% 50%;
+        border-image-source: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600);
     }
     100% {
-        background-position: 400% 50%;
+        border-image-source: linear-gradient(45deg, #006600, #00cc00, #006600, #00cc00);
     }
 }
 
