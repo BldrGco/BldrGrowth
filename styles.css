@@ -74,7 +74,7 @@ nav ul li a:hover {
     width: 50%;
     padding-left: 40px;
     position: absolute;
-    top: 50%;
+    top: 40%; /* Moved up from 50% */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@ nav ul li a:hover {
 
 #hero h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 6rem; /* Increased from 5rem */
+    font-size: 7rem; /* Increased from 6rem */
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: 30px;
@@ -100,7 +100,7 @@ nav ul li a:hover {
 }
 
 #hero p {
-    font-size: 1.8rem; /* Increased from 1.5rem */
+    font-size: 2rem; /* Increased from 1.8rem */
     margin-bottom: 40px;
     text-align: left;
     max-width: 500px;
@@ -131,42 +131,42 @@ nav ul li a:hover {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    border-radius: 52px; /* Slightly larger to wrap the button */
+    border-radius: 52px;
     background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600);
     z-index: -1;
     animation: gradient-move 3s linear infinite;
 }
 
 #hero .hero-button {
-    background: #fff; /* White fill */
-    color: #000; /* Black text */
-    border: 2px solid transparent; /* Space for gradient border */
+    background: #fff;
+    color: #000;
+    border: 2px solid transparent;
 }
 
 #hero .hero-button:hover {
-    background: #e6faff; /* Slightly luminous white */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), /* White glow */
-                0 0 20px rgba(51, 255, 51, 0.6); /* Green glow */
+    background: #e6faff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(51, 255, 51, 0.6);
 }
 
 #hero .hero-button:active {
-    background: #ccffcc; /* Brighter green-tinted white */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 1), /* Brighter white glow */
-                0 0 25px rgba(51, 255, 51, 0.8); /* Brighter green glow */
+    background: #ccffcc;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1),
+                0 0 25px rgba(51, 255, 51, 0.8);
 }
 
 #contact .contact-button {
-    background: #000; /* Black fill */
-    color: #fff; /* White text */
-    border: 2px solid transparent; /* Space for gradient border */
+    background: #000;
+    color: #fff;
+    border: 2px solid transparent;
 }
 
 #contact .contact-button:hover {
-    background: #333; /* Darker gray on hover */
+    background: #333;
 }
 
 #contact .contact-button:active {
-    background: #4d4d4d; /* Slightly lighter gray on click */
+    background: #4d4d4d;
 }
 
 @keyframes gradient-move {
@@ -399,16 +399,16 @@ footer p {
     .hero-content {
         width: 80%;
         padding-left: 20px;
-        top: 50%;
+        top: 40%; /* Moved up from 50% */
         transform: translateY(-50%);
     }
 
     #hero h2 {
-        font-size: 3.5rem; /* Increased from 3rem */
+        font-size: 4rem; /* Increased from 3.5rem */
     }
 
     #hero p {
-        font-size: 1.4rem; /* Increased from 1.2rem */
+        font-size: 1.6rem; /* Increased from 1.4rem */
         margin-bottom: 30px;
     }
 
