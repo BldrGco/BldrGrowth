@@ -115,41 +115,49 @@ nav ul li a:hover {
     font-weight: 600;
     border-radius: 50px;
     position: relative;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s;
+    z-index: 1;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 52px; /* Slightly larger to wrap the button */
+    background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600);
+    z-index: -1;
+    animation: gradient-move 3s linear infinite;
 }
 
 #hero .hero-button {
     background: #fff; /* White fill */
     color: #000; /* Black text */
-    border: 2px solid transparent;
-    border-image: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600) 1;
-    border-image-slice: 1;
-    animation: gradient-move 3s linear infinite;
+    border: 2px solid transparent; /* Space for gradient border */
 }
 
 #hero .hero-button:hover {
-    background: #e6e6e6; /* Slightly darker white on hover */
+    background: #e6e6e6; /* Light gray on hover */
 }
 
 #contact .contact-button {
     background: #000; /* Black fill */
     color: #fff; /* White text */
-    border: 2px solid transparent;
-    border-image: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600) 1;
-    border-image-slice: 1;
-    animation: gradient-move 3s linear infinite;
+    border: 2px solid transparent; /* Space for gradient border */
 }
 
 #contact .contact-button:hover {
-    background: #333; /* Slightly lighter black on hover */
+    background: #333; /* Darker gray on hover */
 }
 
 @keyframes gradient-move {
     0% {
-        border-image-source: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600);
+        background-position: 0% 50%;
     }
     100% {
-        border-image-source: linear-gradient(45deg, #006600, #00cc00, #006600, #00cc00);
+        background-position: 400% 50%;
     }
 }
 
