@@ -52,7 +52,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.2rem; /* Increased from 1.1rem */
+    font-size: 1.2rem;
 }
 
 nav ul li a:hover {
@@ -62,13 +62,14 @@ nav ul li a:hover {
 .header-contact-button {
     display: inline-block;
     padding: 10px 20px;
-    color: #fff;
+    color: #000;
+    background: #fff; /* White fill */
     text-decoration: none;
     font-weight: 600;
     font-size: 1.2rem;
     border-radius: 50px;
     position: relative;
-    background: transparent;
+    border: 2px solid transparent;
     transition: background 0.3s, box-shadow 0.3s;
     z-index: 1;
 }
@@ -87,12 +88,12 @@ nav ul li a:hover {
 }
 
 .header-contact-button:hover {
-    background: rgba(255, 255, 255, 0.1); /* Subtle hover fill */
+    background: #e6faff; /* Subtle luminous white */
     box-shadow: 0 0 10px rgba(51, 255, 51, 0.6);
 }
 
 .header-contact-button:active {
-    background: rgba(51, 255, 51, 0.2); /* Slightly greener click */
+    background: #ccffcc; /* Greener white */
     box-shadow: 0 0 15px rgba(51, 255, 51, 0.8);
 }
 
@@ -491,7 +492,7 @@ footer {
     }
 
     nav ul li a {
-        font-size: 1rem; /* Adjusted for mobile */
+        font-size: 1rem;
     }
 
     .header-contact-button {
@@ -573,7 +574,7 @@ footer {
     }
 
     .social-icon {
-        font-size: 1.2rem;
+        font-size: 1 Roslyn (closed source) - could not be contacted for comment
     }
 
     .copyright {
