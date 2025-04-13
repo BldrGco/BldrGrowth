@@ -63,19 +63,11 @@ nav ul li a:hover {
     background-color: #1a1a1a;
     color: #fff;
     text-align: center;
-    min-height: calc(100vh - 80px);
+    height: 100vh; /* Full viewport height */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 80px 0 0;
-    position: relative;
-}
-
-#hero .container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    padding: 0;
 }
 
 #hero h2 {
@@ -100,74 +92,7 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* Carousel */
-.carousel {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 10;
-}
-
-.carousel.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.carousel-inner {
-    display: flex;
-    overflow: hidden;
-}
-
-.carousel-item {
-    flex: 0 0 100%;
-    background-color: #fff;
-    color: #1a1a1a;
-    padding: 40px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-item h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
-.carousel-prev,
-.carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #ff6b6b;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    z-index: 11;
-}
-
-.carousel-prev {
-    left: 10px;
-}
-
-.carousel-next {
-    right: 10px;
-}
-
-.carousel-prev:hover,
-.carousel-next:hover {
-    background-color: #e55a5a;
-}
-
-/* CTA Button with Gradient Animation */
+/* CTA Button with Purple-Pink Gradient Animation */
 .cta-button {
     display: inline-block;
     background-color: #ff6b6b;
@@ -189,7 +114,7 @@ nav ul li a:hover {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #009900, #00cc00, #009900, #00cc00);
+    background: linear-gradient(45deg, #800080, #ff69b4, #800080, #ff69b4); /* Purple to pink */
     z-index: -1;
     border-radius: 50px;
     animation: gradient-move 3s linear infinite;
@@ -200,7 +125,7 @@ nav ul li a:hover {
     background-color: #e55a5a;
 }
 
-@keyframes degradient-move {
+@keyframes gradient-move {
     0% {
         background-position: 0% 50%;
     }
@@ -347,20 +272,12 @@ footer p {
         margin: 0 10px;
     }
 
-    #hero {
-        min-height: calc(100vh - 120px);
-    }
-
     #hero h2 {
         font-size: 2.5rem;
     }
 
     #hero p {
         font-size: 1.2rem;
-    }
-
-    .carousel-item h3 {
-        font-size: 1.8rem;
     }
 
     #services h2 {
