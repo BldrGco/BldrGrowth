@@ -8,13 +8,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Show statements when scrolling past Hero
+// Show statements when scrolling within Hero
 window.addEventListener('scroll', () => {
     const statements = document.getElementById('statements');
     const hero = document.getElementById('hero');
-    const heroBottom = hero.getBoundingClientRect().bottom;
+    const scrollPosition = window.scrollY;
+    const heroHeight = hero.offsetHeight;
 
-    if (heroBottom <= 0) {
+    if (scrollPosition > 100 && scrollPosition < heroHeight * 0.8) {
         statements.classList.add('visible');
     } else {
         statements.classList.remove('visible');
