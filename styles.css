@@ -63,11 +63,20 @@ nav ul li a:hover {
     background-color: #1a1a1a;
     color: #fff;
     text-align: center;
-    height: 100vh;
+    height: 150vh; /* Extended to allow statements to appear */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0;
+    position: relative;
+}
+
+#hero .container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #hero h2 {
@@ -92,9 +101,9 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* Statements Section */
+/* Statements */
 .statements {
-    position: fixed;
+    position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
@@ -103,7 +112,6 @@ nav ul li a:hover {
     gap: 20px;
     opacity: 0;
     transition: opacity 0.5s ease;
-    z-index: 900;
 }
 
 .statements.visible {
@@ -123,7 +131,7 @@ nav ul li a:hover {
 /* CTA Button with Green Fill and Purple-Pink Gradient Outline */
 .cta-button {
     display: inline-block;
-    background-color: #009900; /* Green fill matching Newsletter */
+    background-color: #009900;
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -142,14 +150,14 @@ nav ul li a:hover {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #800080, #ff69b4, #800080, #ff69b4); /* Purple-pink outline */
+    background: linear-gradient(45deg, #800080, #ff69b4, #800080, #ff69b4);
     z-index: -1;
     border-radius: 50px;
     animation: gradient-move 3s linear infinite;
 }
 
 .cta-button:hover {
-    background-color: #007700; /* Slightly darker green on hover */
+    background-color: #007700;
 }
 
 @keyframes gradient-move {
@@ -281,6 +289,10 @@ footer p {
 
     nav ul li {
         margin: 0 10px;
+    }
+
+    #hero {
+        height: 120vh; /* Slightly shorter for mobile */
     }
 
     #hero h2 {
