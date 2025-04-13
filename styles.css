@@ -418,6 +418,44 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+/* About Page */
+.about-page {
+    padding: 100px 0;
+    background-color: #fff;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.about-page h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+.about-page p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .about-page {
+        padding: 60px 0;
+    }
+
+    .about-page h2 {
+        font-size: 2rem;
+    }
+
+    .about-page p {
+        font-size: 1rem;
+    }
+}
+
 /* Footer */
 footer {
     background-color: #1a1a1a;
