@@ -62,7 +62,7 @@ nav ul li a:hover {
 #hero {
     background-color: #1a1a1a;
     color: #fff;
-    height: 150vh; /* Extended for statements */
+    height: 150vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -73,12 +73,12 @@ nav ul li a:hover {
 .hero-content {
     width: 50%;
     padding-left: 40px;
-    margin-top: 20vh; /* Offset for fixed header */
+    margin-top: 20vh;
 }
 
 #hero h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem; /* Larger for impact */
+    font-size: 5rem;
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: 30px;
@@ -125,18 +125,18 @@ nav ul li a:hover {
 
 .statement-item {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem; /* Larger but balanced */
+    font-size: 2.2rem;
     font-weight: 400;
     color: #fff;
     text-align: right;
     letter-spacing: 1px;
-    max-width: 400px; /* Wider for balance */
+    max-width: 400px;
 }
 
-/* CTA Button with Green Fill and Purple-Pink Gradient Outline */
+/* CTA Button with Two-Tone Green Fill and Purple-Pink Gradient Outline */
 .cta-button {
     display: inline-block;
-    background-color: #009900;
+    background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600); /* Two-tone green fill */
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -145,7 +145,8 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
+    border: 2px solid transparent; /* For gradient outline */
 }
 
 .cta-button::before {
@@ -155,14 +156,14 @@ nav ul li a:hover {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #800080, #ff69b4, #800080, #ff69b4);
+    background: linear-gradient(45deg, #800080, #ff69b4, #800080, #ff69b4); /* Purple-pink outline */
     z-index: -1;
     border-radius: 50px;
     animation: gradient-move 3s linear infinite;
 }
 
 .cta-button:hover {
-    background-color: #007700;
+    background: linear-gradient(45deg, #00b300, #004d00, #00b300, #004d00); /* Slightly darker green gradient on hover */
 }
 
 @keyframes gradient-move {
