@@ -177,9 +177,9 @@ nav ul li a:hover {
 
 /* Services Section */
 #services {
-    padding: 100px 0; /* Increased padding for length */
+    padding: 100px 0;
     background-color: #fff;
-    min-height: 120vh; /* Extended height */
+    min-height: 120vh;
 }
 
 #services h2 {
@@ -250,6 +250,7 @@ nav ul li a:hover {
 
 .testimonials .title-white {
     color: #fff;
+    -webkit-text-stroke: 2px #000; /* Black outline for Testimonials & Reviews */
 }
 
 .testimonials-track {
@@ -404,6 +405,10 @@ footer p {
 
     .testimonials h2 {
         font-size: 3rem;
+    }
+
+    .testimonials .title-white {
+        -webkit-text-stroke: 1px #000; /* Thinner outline for mobile */
     }
 
     .testimonial-item {
