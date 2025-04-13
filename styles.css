@@ -428,11 +428,20 @@ nav ul li a:hover {
 
 .about-page h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
+    font-size: 7rem;
     font-weight: 400;
-    margin-bottom: 30px;
-    color: #1a1a1a;
-    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+.about-page .title-black {
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.about-page .title-white {
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
 }
 
 .about-page p {
@@ -440,6 +449,40 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 0 auto 20px;
     color: #333;
+}
+
+.about-page .services-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.about-page .services-list li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-page .services-list strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.about-page .about-button {
+    background: #fff;
+    color: #000;
+    border: 2px solid transparent;
+}
+
+.about-page .about-button:hover {
+    background: #e6faff;
+    box-shadow: 0 0 10px rgba(51, 255, 51, 0.6);
+}
+
+.about-page .about-button:active {
+    background: #ccffcc;
+    box-shadow: 0 0 15px rgba(51, 255, 51, 0.8);
 }
 
 /* Footer */
@@ -598,10 +641,18 @@ footer {
     }
 
     .about-page h2 {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 
     .about-page p {
+        font-size: 1rem;
+    }
+
+    .about-page .services-list {
+        margin: 15px auto;
+    }
+
+    .about-page .services-list li {
         font-size: 1rem;
     }
 
