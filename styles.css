@@ -63,7 +63,11 @@ nav ul li a:hover {
     background-color: #1a1a1a;
     color: #fff;
     text-align: center;
-    padding: 150px 0 100px;
+    min-height: calc(100vh - 80px); /* Full height minus header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
 }
 
 #hero h2 {
@@ -88,6 +92,7 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+/* CTA Button with Gradient Animation */
 .cta-button {
     display: inline-block;
     background-color: #ff6b6b;
@@ -96,11 +101,37 @@ nav ul li a:hover {
     text-decoration: none;
     font-weight: 600;
     border-radius: 50px;
-    transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #009900, #00cc00, #009900, #00cc00);
+    z-index: -1;
+    border-radius: 50px;
+    animation: gradient-move 3s linear infinite;
 }
 
 .cta-button:hover {
+    color: #fff;
     background-color: #e55a5a;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 400% 50%;
+    }
 }
 
 /* Services Section */
@@ -110,13 +141,13 @@ nav ul li a:hover {
 }
 
 #services h2 {
-    font-family: 'Bebas Neue', sans-serif; /* Matches Hero title */
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 3rem;
     font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
     color: #1a1a1a;
-    letter-spacing: 2px; /* Adds punchiness */
+    letter-spacing: 2px;
 }
 
 .services-grid {
@@ -126,23 +157,23 @@ nav ul li a:hover {
 }
 
 .service-card {
-    background-color: #1a1a1a; /* Black for bold contrast */
+    background-color: #1a1a1a;
     color: #fff;
     padding: 40px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer; /* Indicates interactivity */
+    cursor: pointer;
 }
 
 .service-card:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .service-card h3 {
-    font-family: 'Bebas Neue', sans-serif; /* Matches Hero title */
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 15px;
@@ -158,7 +189,7 @@ nav ul li a:hover {
 /* Newsletter Section */
 #newsletter {
     padding: 80px 0;
-    background-color: #009900; /* Darker, bolder green */
+    background-color: #009900;
     color: #fff;
     text-align: center;
 }
@@ -239,6 +270,10 @@ footer p {
 
     nav ul li {
         margin: 0 10px;
+    }
+
+    #hero {
+        min-height: calc(100vh - 120px); /* Adjust for taller header on mobile */
     }
 
     #hero h2 {
