@@ -732,7 +732,7 @@ div.statements#statements.visible {
 
 /* Services Page */
 .services-page {
-    padding: 100px 0;
+    padding: 150px 0; /* Increased padding-top from 100px to 150px to lower the title */
     background-color: #fff;
     min-height: 100vh;
 }
@@ -1048,7 +1048,7 @@ footer {
     }
 
     .services-page {
-        padding: 60px 0;
+        padding: 120px 0; /* Adjusted padding-top from 60px to 120px for mobile */
     }
 
     .services-page h2 {
@@ -1231,6 +1231,7 @@ footer {
         font-size: 0.9rem;
     }
 }
+
 /* Services Section */
 #services {
     padding: 120px 0 80px 0; /* Match the padding from #start-here and #about */
@@ -1372,6 +1373,7 @@ footer {
         font-size: 0.9rem;
     }
 }
+
 /* Services Block (Homepage) */
 #services {
     padding: 80px 0;
