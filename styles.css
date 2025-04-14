@@ -732,7 +732,7 @@ div.statements#statements.visible {
 
 /* Services Page */
 .services-page {
-    padding: 150px 0; /* Increased padding-top from 100px to 150px to lower the title */
+    padding: 180px 0; /* Increased padding-top from 150px to 180px to fully clear header */
     background-color: #fff;
     min-height: 100vh;
 }
@@ -757,6 +757,9 @@ div.statements#statements.visible {
 }
 
 .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -1048,7 +1051,7 @@ footer {
     }
 
     .services-page {
-        padding: 120px 0; /* Adjusted padding-top from 60px to 120px for mobile */
+        padding: 150px 0; /* Adjusted padding-top from 120px to 150px for mobile */
     }
 
     .services-page h2 {
