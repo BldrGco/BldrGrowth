@@ -27,166 +27,63 @@
         </div>
     </header>
 
-/* Blog Page Section (blog.html) */
-#blog-page {
-    padding: 120px 0 80px 0; /* Increased top padding to fix header overlap */
-    background-color: #e6ffe6;
-}
+    <!-- Blog Page Section -->
+    <section id="blog-page">
+        <div class="container blog-container">
+            <!-- Section 1: Title and Intro -->
+            <h1>
+                <span class="title-black">Specialist Insights</span><br>
+                <span class="title-white">Industry Advice</span>
+            </h1>
+            <p class="intro-text">Welcome to the <strong>BLDR Blog</strong>—your go-to resource for growth-focused insights, practical advice, and bold strategies to help you <strong>build bolder</strong> and <strong>grow smarter</strong>.</p>
 
-#blog-page .blog-container {
-    text-align: left;
-}
-
-#blog-page h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 20px;
-}
-
-#blog-page .intro-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    color: #1a1a1a;
-    margin-bottom: 40px;
-}
-
-#blog-page .substack-posts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-#blog-page .substack-post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#blog-page .substack-post img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    aspect-ratio: 1/1;
-    border-radius: 10px;
-    background-color: #ddd;
-}
-
-#blog-page .substack-post h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-top: 10px;
-    text-align: center;
-    color: #1a1a1a;
-}
-
-#blog-page .substack-post a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#blog-page .substack-post a:hover h3 {
-    color: #00cc00;
-}
-
-#blog-page .cta-section {
-    margin-top: 40px;
-    text-align: center;
-}
-
-#blog-page .cta-section h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-}
-
-#blog-page .cta-section p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-#blog-page .cta-section blockquote {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #1a1a1a;
-    border-left: 4px solid #00cc00;
-    padding-left: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-}
-
-#blog-page .cta-section a {
-    color: #00cc00;
-    text-decoration: none;
-}
-
-#blog-page .cta-section a:hover {
-    text-decoration: underline;
-}
-
-#blog-page .cta-section .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00cc00;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-#blog-page .cta-section .cta-button:hover {
-    background-color: #009900;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #blog-page {
-        padding: 100px 0 60px 0;
-    }
-
-    #blog-page h1 {
-        font-size: 2.5rem;
-    }
-
-    #blog-page .intro-text {
-        font-size: 1rem;
-    }
-
-    #blog-page .substack-posts-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    #blog-page .substack-post img {
-        height: 150px;
-    }
-
-    #blog-page .substack-post h3 {
-        font-size: 1rem;
-    }
-
-    #blog-page .cta-section h2 {
-        font-size: 1.8rem;
-    }
-
-    #blog-page .cta-section p,
-    #blog-page .cta-section blockquote {
-        font-size: 0.9rem;
-    }
-}
+            <!-- Section 2: Substack Posts Grid -->
+            <div class="blog-embed">
+                <div class="substack-posts-grid">
+                    <!-- Post 1 -->
+                    <div class="substack-post">
+                        <a href="https://open.substack.com/pub/theintermediator/p/the-power-of-headlines-how-8-words?r=2083oh&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/8b7c987e-8936-4610-9be4-f27f7fcda328_1080x1080.png" alt="The Power of Headlines: How 8 Words Can Hook Your Audience">
+                            <h3>The Power of Headlines: How 8 Words Can Hook Your Audience</h3>
+                        </a>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="substack-post">
+                        <a href="https://open.substack.com/pub/theintermediator/p/confidence-isnt-a-giftits-a-skill?r=2083oh&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/e8c7dc0f-af34-44b3-8c27-4fd1ad2eaa95_1080x1080.png" alt="Confidence Isn’t a Gift—It’s a Skill You Build">
+                            <h3>Confidence Isn’t a Gift—It’s a Skill You Build</h3>
+                        </a>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="substack-post">
+                        <a href="https://open.substack.com/pub/theintermediator/p/success-isnt-a-hackits-a-mindset?r=2083oh&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/11b7b987-8d1d-41a0-90c9-38c9ed881fd7_1080x1080.png" alt="Success Isn’t a Hack—It’s a Mindset You Master">
+                            <h3>Success Isn’t a Hack—It’s a Mindset You Master</h3>
+                        </a>
+                    </div>
+                    <!-- Post 4 -->
+                    <div class="substack-post">
+                        <a href="https://theintermediator.substack.com/p/the-space-between-dream-and-action?r=2083oh" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/310bdc31-489f-4d3a-a1de-817d95f8c0dc_1080x1080.png" alt="The Space Between Dream and Action">
+                            <h3>The Space Between Dream and Action</h3>
+                        </a>
+                    </div>
+                    <!-- Post 5 -->
+                    <div class="substack-post">
+                        <a href="https://theintermediator.substack.com/p/adaptability-in-numbers?r=2083oh" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/afd1d222-06cb-4efa-ba86-26d8e9f17c7b_1080x1080.png" alt="Adaptability in Numbers">
+                            <h3>Adaptability in Numbers</h3>
+                        </a>
+                    </div>
+                    <!-- Post 6 -->
+                    <div class="substack-post">
+                        <a href="https://theintermediator.substack.com/p/execution-is-everything?r=2083oh" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/ea5873ac-cd4c-4232-be94-7e3e49b5f0ac_1080x1080.png" alt="Execution Is Everything">
+                            <h3>Execution Is Everything</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <!-- Section 3: Call to Action -->
             <div class="cta-section">
