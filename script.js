@@ -1,23 +1,15 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const statements = document.querySelector('.statements');
 
-// Show statements when scrolling within Hero
-window.addEventListener('scroll', () => {
-    const statements = document.getElementById('statements');
-    const hero = document.getElementById('hero');
-    const scrollPosition = window.scrollY;
-    const heroHeight = hero.offsetHeight;
+    const handleScroll = () => {
+        const statementsPosition = statements.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
-    if (scrollPosition > 50 && scrollPosition < heroHeight * 0.8) {
-        statements.classList.add('visible');
-    } else {
-        statements.classList.remove('visible');
-    }
+        if (statementsPosition < windowHeight * 0.75) {
+            statements.classList.add('visible');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check on page load
 });
