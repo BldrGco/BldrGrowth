@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Script loaded'); // Debug: Confirm script is running
+    console.log('Script loaded');
 
     const statements = document.getElementById('statements');
     if (!statements) {
@@ -7,11 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    console.log('Statements element found:', statements); // Debug: Confirm element is found
+    console.log('Statements element found:', statements);
 
-    // Add the 'visible' class after a 2-second delay
     setTimeout(() => {
-        console.log('Adding visible class for fade-in'); // Debug
+        console.log('Adding visible class for fade-in');
         statements.classList.add('visible');
-    }, 2000); // 2000ms = 2 seconds
+    }, 2000);
 });
