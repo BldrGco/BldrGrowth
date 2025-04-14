@@ -21,7 +21,7 @@ body {
 header {
     background-color: #1a1a1a;
     color: #fff;
-    padding: 10px 0; /* Reduced from 20px to prevent overlap */
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -29,7 +29,7 @@ header {
 }
 
 header .container {
-    display: flex; /* Added Flexbox for better alignment */
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -40,13 +40,13 @@ header .container {
 }
 
 .logo {
-    height: 80px; /* Current size, as confirmed */
+    height: 80px;
     width: auto;
     display: block;
 }
 
 nav {
-    float: none; /* Changed from float: right to work with Flexbox */
+    float: none;
 }
 
 nav ul {
@@ -118,7 +118,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
-    padding-top: 100px; /* Added to account for fixed header */
+    padding-top: 120px; /* Increased to prevent header overlap */
 }
 
 .hero-content {
@@ -567,7 +567,7 @@ nav ul li a:hover {
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-   чия: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .blog-block:hover {
@@ -753,7 +753,7 @@ footer {
     }
 
     header .container {
-        flex-direction: column; /* Stack logo and nav on mobile */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -781,7 +781,7 @@ footer {
 
     #hero {
         height: 120vh;
-        padding-top: 120px; /* Adjusted for mobile header height */
+        padding-top: 140px; /* Adjusted for mobile header height */
     }
 
     .hero-content {
