@@ -248,7 +248,8 @@ nav ul li a:hover {
 div.statements#statements {
     position: absolute;
     top: 15%;
-    right: 10%;
+    left: 50%; /* Center the container */
+    transform: translateX(-50%); /* Adjust for centering */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -262,15 +263,17 @@ div.statements#statements.visible {
 
 .statement-item {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Slightly smaller to fit better */
     font-weight: 400;
     color: #fff;
-    text-align: right;
+    text-align: center; /* Center the text */
     letter-spacing: 1px;
-    max-width: 300px; /* Increased to accommodate longer text */
+    max-width: 450px; /* Increased to fit statements in one line */
+    position: relative; /* For the ::before background */
+    padding: 10px 15px; /* Padding for the background shape */
 }
 
-/* Stagger each statement to the left */
+/* Stagger each statement slightly for visual interest */
 .statement-item:nth-child(1) {
     transform: translateX(0);
 }
@@ -280,7 +283,32 @@ div.statements#statements.visible {
 }
 
 .statement-item:nth-child(3) {
-    transform: translateX(-40px);
+    transform: translateX(20px);
+}
+
+/* Highlight background shape */
+.statement-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px; /* Rounded corners */
+    z-index: -1; /* Behind the text */
+    opacity: 1;
+    transition: opacity 1s ease;
+    animation: fade-out-highlight 1s ease 5s forwards; /* Fade out after 5s (2s delay + 3s after appearing) */
+}
+
+@keyframes fade-out-highlight {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Services Section */
@@ -823,13 +851,15 @@ footer {
     }
 
     .statements {
-        right: 5%;
+        left: 50%;
         top: 10%;
+        transform: translateX(-50%);
     }
 
     .statement-item {
-        font-size: 1.4rem;
-        max-width: 220px; /* Adjusted for longer text on mobile */
+        font-size: 1.2rem; /* Smaller font size on mobile */
+        max-width: 300px; /* Adjusted for mobile */
+        padding: 8px 12px;
     }
 
     .statement-item:nth-child(1) {
@@ -841,7 +871,7 @@ footer {
     }
 
     .statement-item:nth-child(3) {
-        transform: translateX(-20px);
+        transform: translateX(10px);
     }
 
     #services {
