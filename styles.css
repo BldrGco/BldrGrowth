@@ -34,7 +34,7 @@ header {
 }
 
 .logo {
-    height: 40px; /* Adjust based on your logo's dimensions */
+    height: 60px; /* Increased from 40px */
     width: auto;
     display: block;
 }
@@ -537,8 +537,7 @@ nav ul li a:hover {
 .blog-page h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 7rem;
-    font-weight: 4
-00;
+    font-weight: 400;
     line-height: 1.1;
     margin-bottom: 60px;
     text-align: center;
@@ -743,7 +742,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo {
-        height: 30px; /* Adjust for smaller screens */
+        height: 45px; /* Increased from 30px */
     }
 
     nav {
