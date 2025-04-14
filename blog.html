@@ -3,72 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | The BLDR Growth Co.</title>
+    <title>Blog - The BLDR Growth Co.</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- Header -->
     <header>
-    <div class="container">
-        <a href="index.html" class="logo-link">
-            <img src="images/bldr-logo.png" alt="The BLDR Growth Co. Logo" class="logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="index.html#contact">Resources</a></li>
-                <li><a href="index.html#contact" class="header-contact-button">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/bldr-logo.png" alt="The BLDR Growth Co. Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Resources</a></li>
+                    <li><a href="#contact" class="header-contact-button">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Blog Section -->
-    <section id="blog" class="blog-page">
-        <div class="container">
-            <h2>
-                <span class="title-black">IDEAS THAT</span><br>
-                <span class="title-white">BUILD BOLDER</span>
-            </h2>
-            <div class="blog-block left-block">
-                <h3>Mindset Mastery</h3>
-                <p>Unlock the mental frameworks that drive relentless growth. Dive into insights on resilience, focus, and creative problem-solving to level up your game.</p>
-                <a href="https://theintermediator.substack.com/t/mindset" class="cta-button blog-button">Explore Mindset</a>
+    <section id="blog">
+        <div class="container blog-container">
+            <!-- Section 1: Title and Intro -->
+            <h1>
+                <span class="title-black">Specialist Insights</span><br>
+                <span class="title-white">Industry Advice</span>
+            </h1>
+            <p class="intro-text">Welcome to the <strong>BLDR Blog</strong>—your go-to resource for growth-focused insights, practical advice, and bold strategies to help you <strong>build bolder</strong> and <strong>grow smarter</strong>.</p>
+
+            <!-- Section 2: Substack Posts Grid -->
+            <div class="blog-embed">
+                <div class="substack-posts-grid">
+                    <!-- Post 1 -->
+                    <div class="substack-post">
+                        <a href="https://open.substack.com/pub/theintermediator/p/the-power-of-headlines-how-8-words?r=2083oh&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/8b7c987e-8936-4610-9be4-f27f7fcda328_1080x1080.png" alt="The Power of Headlines: How 8 Words Can Hook Your Audience">
+                            <h3>The Power of Headlines: How 8 Words Can Hook Your Audience</h3>
+                        </a>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="substack-post">
+                        <a href="https://open.substack.com/pub/theintermediator/p/confidence-isnt-a-giftits-a-skill?r=2083oh&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/e8c7dc0f-af34-44b3-8c27-4fd1ad2eaa95_1080x1080.png" alt="Confidence Isn’t a Gift—It’s a Skill You Build">
+                            <h3>Confidence Isn’t a Gift—It’s a Skill You Build</h3>
+                        </a>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="substack-post">
+                        <a href="https://open.substack.com/pub/theintermediator/p/success-isnt-a-hackits-a-mindset?r=2083oh&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/11b7b987-8d1d-41a0-90c9-38c9ed881fd7_1080x1080.png" alt="Success Isn’t a Hack—It’s a Mindset You Master">
+                            <h3>Success Isn’t a Hack—It’s a Mindset You Master</h3>
+                        </a>
+                    </div>
+                    <!-- Post 4 -->
+                    <div class="substack-post">
+                        <a href="https://theintermediator.substack.com/p/the-space-between-dream-and-action?r=2083oh" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/310bdc31-489f-4d3a-a1de-817d95f8c0dc_1080x1080.png" alt="The Space Between Dream and Action">
+                            <h3>The Space Between Dream and Action</h3>
+                        </a>
+                    </div>
+                    <!-- Post 5 -->
+                    <div class="substack-post">
+                        <a href="https://theintermediator.substack.com/p/adaptability-in-numbers?r=2083oh" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/afd1d222-06cb-4efa-ba86-26d8e9f17c7b_1080x1080.png" alt="Adaptability in Numbers">
+                            <h3>Adaptability in Numbers</h3>
+                        </a>
+                    </div>
+                    <!-- Post 6 -->
+                    <div class="substack-post">
+                        <a href="https://theintermediator.substack.com/p/execution-is-everything?r=2083oh" target="_blank">
+                            <img src="https://substack-post-media.s3.amazonaws.com/public/images/ea5873ac-cd4c-4232-be94-7e3e49b5f0ac_1080x1080.png" alt="Execution Is Everything">
+                            <h3>Execution Is Everything</h3>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="blog-block right-block">
-                <h3>Growth Skills</h3>
-                <p>Practical tools and strategies to scale your brand or business. From copywriting hacks to system-building, these are the skills that move the needle.</p>
-                <a href="https://theintermediator.substack.com/t/growth" class="cta-button blog-button">Explore Growth</a>
-            </div>
-            <div class="blog-block left-block">
-                <h3>Strategic Application</h3>
-                <p>Proven frameworks turned into real-world wins. Learn how to apply military-grade systems and bold ideas to crush your goals.</p>
-                <a href="https://theintermediator.substack.com/t/strategy" class="cta-button blog-button">Explore Strategy</a>
+
+            <!-- Section 3: Call to Action -->
+            <div class="cta-section">
+                <h2>✉️ Want More Growth Insights?</h2>
+                <p>Join thousands of builders and brands getting weekly tips to <strong>build bolder</strong> and <strong>grow smarter</strong>.</p>
+                <blockquote>
+                    <p>📬 <strong><a href="https://theintermediator.substack.com/" target="_blank" class="cta-button">Subscribe to the Newsletter</a></strong><br>Free, actionable growth fuel delivered to your inbox.</p>
+                </blockquote>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <nav class="footer-nav">
+            <div class="footer-nav">
                 <ul>
-                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#contact">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </nav>
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
-            <p class="copyright">© 2025 The BLDR Growth Co. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                © 2025 The BLDR Growth Co. All rights reserved.
+            </div>
         </div>
     </footer>
 
