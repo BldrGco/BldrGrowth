@@ -3,73 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | The BLDR Growth Co.</title>
+    <title>About - The BLDR Growth Co.</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- Header -->
     <header>
-    <div class="container">
-        <a href="index.html" class="logo-link">
-            <img src="images/bldr-logo.png" alt="The BLDR Growth Co. Logo" class="logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="index.html#contact">Resources</a></li>
-                <li><a href="index.html#contact" class="header-contact-button">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/bldr-logo.png" alt="The BLDR Growth Co. Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Resources</a></li>
+                    <li><a href="#contact" class="header-contact-button">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- About Section -->
-    <section id="about" class="about-page">
-        <div class="container">
-            <h2>
-                <span class="title-black">MEET THE HUMAN</span><br>
-                <span class="title-white">BEHIND THE WORDS</span>
-            </h2>
-            <div class="about-block left-block">
-                <p>Hey, I’m Jez—founder of The BLDR Growth Co. I turn chaos into clarity with words that work. For over 16 years, I’ve honed systems and strategies in high-stakes environments, from military logistics to scrappy startups. Now, I’m here to help your brand grow through three core services.</p>
+    <section id="about">
+        <div class="container about-container">
+            <h1>
+                <span class="title-black">Meet the Human</span><br>
+                <span class="title-white">Behind the Words</span>
+            </h1>
+
+            <!-- Bio Section -->
+            <div class="bio-section">
+                <p class="intro-text">I’m Jez, the human behind <strong>The BLDR Growth Co.</strong>—a growth strategist, writer, and creative thinker obsessed with helping builders and brands unlock their potential.</p>
+                <p class="intro-text">With over 6 years of experience in digital strategy, copywriting, and content creation, I’ve worked with an start-ups, thought leaders, brands, ambitious individuals and more to turn ideas into impactful results. I believe growth isn’t about hacks—it’s about systems, clarity, and bold action.</p>
+                <p class="intro-text">When I’m not crafting words that convert or building strategies that scale, you can find me working my day job in the Air Force or roaming the hills and cities of the UK with my family, or in the gym lifting weights. Let’s build something bold together.</p>
             </div>
-            <div class="about-block right-block">
-                <ul class="services-list">
-                    <li><strong>Email Strategy</strong>: Craft campaigns that grab attention, build trust, and drive conversions—every click counts.</li>
-                    <li><strong>Ghostwriting</strong>: Your voice, amplified. I create authentic content that captures your brand and connects with your audience.</li>
-                    <li><strong>Web Copy</strong>: Bold, clear words that turn visitors into customers, designed to scale your impact.</li>
+
+            <!-- For the Ambitious Builder -->
+            <div class="builder-section">
+                <h2>🔥 Helping Ambitious Builders Grow</h2>
+                <p>I get it — you’re someone who knows there’s more to unlock. Whether you’re building a stronger mindset, a fitter body, or your own personal brand, I’m here to fuel your growth.</p>
+                <p><strong>What I offer individuals:</strong></p>
+                <ul>
+                    <li>Practical growth frameworks and mental performance tips to keep you moving forward</li>
+                    <li>Weekly insights on creative thinking, copywriting, and building momentum</li>
+                    <li>Straight-to-the-point advice — no fluff, just fire</li>
                 </ul>
+                <blockquote>
+                    <p>🎯 <strong>Start growing: <a href="https://theintermediator.substack.com/" target="_blank">Subscribe to the Newsletter</a></strong><br>Get free, weekly growth fuel delivered to your inbox.</p>
+                </blockquote>
             </div>
-            <div class="about-block left-block">
-                <p>My approach? No fluff—just proven frameworks, creative problem-solving, and a relentless focus on results. I’ve failed, adapted, and built again, so you can grow faster with fewer bruises.</p>
+
+            <!-- For Brands, Startups & Creators -->
+            <div class="brands-section">
+                <h2>💼 Helping Brands Scale Smarter</h2>
+                <p>Running a brand, startup, or solo business? I help you grow without the overwhelm, using strategies that drive real results.</p>
+                <p><strong>What I offer brands and creators:</strong></p>
+
+                <h3>💌 Email Strategy & Newsletter Building</h3>
+                <p>Build a newsletter your audience loves. From welcome flows to product launches, I craft email campaigns that boost <strong>revenue and connection</strong>.</p>
+
+                <h3>✍️ Ghostwriting for Founders & Thought Leaders</h3>
+                <p>Grow your presence without the time sink. I write authentic content for LinkedIn, newsletters, blogs, or even books — all in your voice.</p>
+
+                <h3>🖥 Web Copy that Converts</h3>
+                <p>Your website should work as hard as you do. I create <strong>sharp, strategic copy</strong> for homepages, landing pages, and more, designed to convert visitors into customers.</p>
             </div>
-            <div class="about-block right-block">
-                <p>Ready to build something bold? <a href="index.html#contact" class="cta-button about-button">Let’s Talk</a></p>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h2>✉️ Let’s Grow Together</h2>
+                <p>Ready to build something bold? Whether you’re an individual or a brand, I’m here to help you grow smarter.</p>
+                <blockquote>
+                    <p>📬 <strong><a href="mailto:info@bldr.com" class="cta-button">Reach out now</a></strong> and let’s talk strategy.</p>
+                </blockquote>
+            </div>
+
+            <!-- Signature -->
+            <div class="signature-section">
+                <p><strong>The BLDR Growth Co.</strong><br><em>Helping builders grow digitally. Helping brands grow ROI.</em><br>Let’s build smarter. Let’s grow bolder.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <nav class="footer-nav">
+            <div class="footer-nav">
                 <ul>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#contact">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </nav>
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
-            <p class="copyright">© 2025 The BLDR Growth Co. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyright">
+                © 2025 The BLDR Growth Co. All rights reserved.
+            </div>
         </div>
     </footer>
 
