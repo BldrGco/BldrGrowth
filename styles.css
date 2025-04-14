@@ -1372,3 +1372,90 @@ footer {
         font-size: 0.9rem;
     }
 }
+/* Services Block (Homepage) */
+#services {
+    padding: 80px 0;
+    background-color: #fff; /* White background to contrast with other sections */
+}
+
+.services-container {
+    text-align: left; /* Match other sections */
+}
+
+#services h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem; /* Slightly smaller than main titles due to space */
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.service-item .learn-more {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00cc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-item .learn-more:hover {
+    color: #009900; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #services {
+        padding: 60px 0;
+    }
+
+    #services h2 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack services on mobile */
+        gap: 20px;
+    }
+
+    .service-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-item p {
+        font-size: 0.9rem;
+    }
+
+    .service-item .learn-more {
+        font-size: 0.9rem;
+    }
+}
