@@ -402,19 +402,21 @@ div.statements#statements.visible {
 
 #blog h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem; /* Reduced from 3rem to prevent excessive wrapping */
     font-weight: 400;
-    margin-bottom: 20px;
+    line-height: 1.2; /* Added for better readability */
+    margin-bottom: 40px; /* Increased from 20px to give more space before the grid */
     color: #1a1a1a;
     letter-spacing: 2px;
 }
 
-#blog p {
+/* Remove the #blog p styles since we're no longer using a <p> tag */
+/* #blog p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-}
+} */
 
-/* New styles for Substack posts grid */
+/* Styles for Substack posts grid */
 .substack-posts-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -476,11 +478,7 @@ div.statements#statements.visible {
     }
 
     #blog h2 {
-        font-size: 2rem;
-    }
-
-    #blog p {
-        font-size: 1rem;
+        font-size: 1.8rem; /* Reduced from 2rem for mobile */
     }
 
     .blog-embed iframe {
