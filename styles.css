@@ -276,58 +276,64 @@ div.statements#statements.visible {
     transform: none;
 }
 
-/* Services Section */
+/* Services Block (Homepage) */
 #services {
-    padding: 100px 0;
-    background-color: #fff;
-    min-height: 120vh;
+    padding: 120px 0 80px 0; /* Match the padding from #start-here and #about */
+    background-color: #e6ffe6;
+}
+
+.services-container {
+    text-align: left;
 }
 
 #services h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem; /* Slightly smaller than main titles due to space */
     font-weight: 400;
-    text-align: center;
+    line-height: 1;
     margin-bottom: 40px;
-    color: #1a1a1a;
-    letter-spacing: 2px;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-bottom: 60px;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.service-card {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+.service-item {
+    display: flex;
+    flex-direction: column;
 }
 
-.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.service-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 400;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.service-card p {
+.service-item h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.service-item .learn-more {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00cc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-item .learn-more:hover {
+    color: #009900; /* Darker shade on hover */
 }
 
 /* Testimonials */
@@ -395,7 +401,7 @@ div.statements#statements.visible {
 
 /* Blog Page Section (blog.html) */
 #blog-page {
-    padding: 180px 0 80px 0; /* Increased top padding further to fix header overlap */
+    padding: 180px 0 80px 0; /* Increased top padding to fix header overlap */
     background-color: #e6ffe6;
 }
 
@@ -405,7 +411,7 @@ div.statements#statements.visible {
 
 #blog-page h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 7rem; /* Increased to make title bigger, matching homepage blog title size */
+    font-size: 7rem; /* Increased to make title bigger */
     font-weight: 400;
     line-height: 1;
     margin-bottom: 20px;
@@ -515,69 +521,6 @@ div.statements#statements.visible {
 
 #blog-page .cta-section .cta-button:hover {
     background-color: #009900;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #services-page {
-        padding: 150px 0 60px 0;
-    }
-
-    #services-page h1 {
-        font-size: 2.5rem;
-    }
-
-    #services-page h2 {
-        font-size: 1.8rem;
-    }
-
-    #services-page h3 {
-        font-size: 1.3rem;
-    }
-
-    #services-page .intro-text {
-        font-size: 1rem;
-    }
-
-    #services-page p,
-    #services-page ul,
-    #services-page blockquote {
-        font-size: 0.9rem;
-    }
-
-    #blog-page {
-        padding: 150px 0 60px 0;
-    }
-
-    #blog-page h1 {
-        font-size: 4rem; /* Adjusted to scale with larger desktop size */
-    }
-
-    #blog-page .intro-text {
-        font-size: 1rem;
-    }
-
-    #blog-page .substack-posts-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    #blog-page .substack-post img {
-        height: 150px;
-    }
-
-    #blog-page .substack-post h3 {
-        font-size: 1rem;
-    }
-
-    #blog-page .cta-section h2 {
-        font-size: 1.8rem;
-    }
-
-    #blog-page .cta-section p,
-    #blog-page .cta-section blockquote {
-        font-size: 0.9rem;
-    }
 }
 
 /* Contact Section */
@@ -719,36 +662,7 @@ div.statements#statements.visible {
     margin-top: 40px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #about {
-        padding: 100px 0 60px 0;
-    }
-
-    #about h1 {
-        font-size: 2.5rem;
-    }
-
-    #about h2 {
-        font-size: 1.8rem;
-    }
-
-    #about h3 {
-        font-size: 1.3rem;
-    }
-
-    #about .intro-text {
-        font-size: 1rem;
-    }
-
-    #about p,
-    #about ul,
-    #about blockquote {
-        font-size: 0.9rem;
-    }
-}
-
-/* Blog Page */
+/* Blog Page (Placeholder for blog.html, already handled by #blog-page) */
 .blog-page {
     padding: 100px 0;
     background-color: #fff;
@@ -820,92 +734,117 @@ div.statements#statements.visible {
     box-shadow: 0 0 15px rgba(51, 255, 51, 0.8);
 }
 
-/* Services Page */
-.services-page {
-    padding: 100px 0;
-    background-color: #fff;
-    min-height: 100vh;
+/* Services Page Section (services.html) */
+#services-page {
+    padding: 180px 0 80px 0; /* Increased top padding to fix header overlap */
+    background-color: #e6ffe6;
 }
 
-.services-page h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 7rem;
-    font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-.services-page .title-black {
-    color: #000;
-    -webkit-text-stroke: 2px #fff;
-}
-
-.services-page .title-white {
-    color: #fff;
-    -webkit-text-stroke: 2px #000;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.service-block {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #e0e0e0;
-}
-
-.service-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 204, 0, 0.25);
-}
-
-.service-icon {
-    font-size: 2.5rem;
-    color: #00cc00;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.service-block h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-.service-block p {
-    font-size: 1.1rem;
-    color: #333;
+.services-container {
     text-align: left;
+}
+
+#services-page h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1;
     margin-bottom: 20px;
 }
 
-.services-page .service-button {
-    background: #fff;
-    color: #000;
-    border: 2px solid transparent;
-    display: block;
+#services-page .intro-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+#services-page .service-section,
+#services-page .cta-section {
+    margin-bottom: 40px;
+}
+
+#services-page h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+#services-page h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#services-page p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#services-page ul {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+#services-page ul li {
+    margin-bottom: 10px;
+}
+
+#services-page blockquote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #1a1a1a;
+    border-left: 4px solid #00cc00;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+#services-page a {
+    color: #00cc00;
+    text-decoration: none;
+}
+
+#services-page a:hover {
+    text-decoration: underline;
+}
+
+#services-page .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00cc00;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.services-page .service-button:hover {
-    background: #e6faff;
-    box-shadow: 0 0 10px rgba(51, 255, 51, 0.6);
+#services-page .cta-button:hover {
+    background-color: #009900;
 }
 
-.services-page .service-button:active {
-    background: #ccffcc;
-    box-shadow: 0 0 15px rgba(51, 255, 51, 0.8);
+#services-page .signature-section {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-top: 40px;
 }
 
 /* Footer */
@@ -958,221 +897,6 @@ footer {
 .copyright {
     font-size: 1rem;
     opacity: 0.8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .logo {
-        height: 60px;
-    }
-
-    header .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 5px 10px;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-    }
-
-    .header-contact-button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    #hero {
-        height: 110vh;
-        padding-top: 140px;
-    }
-
-    .hero-content {
-        width: 80%;
-        padding-left: 20px;
-        top: 40%;
-        transform: translateY(-50%);
-    }
-
-    #hero h2 {
-        font-size: 4rem;
-    }
-
-    #hero p {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-    }
-
-    .hero-hashtag {
-        font-size: 1.8rem;
-        bottom: 30px;
-    }
-
-    .button-group {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .statements {
-        right: 5%;
-        top: 48%; /* Adjusted to align with "Grow Smarter" on mobile */
-    }
-
-    .statement-item {
-        font-size: 1.2rem;
-        max-width: 400px;
-    }
-
-    #services {
-        padding: 60px 0;
-        min-height: 100vh;
-    }
-
-    #services h2 {
-        font-size: 2rem;
-    }
-
-    .services-grid {
-        margin-bottom: 40px;
-    }
-
-    .testimonials h2 {
-        font-size: 3rem;
-    }
-
-    .testimonials .title-white {
-        -webkit-text-stroke: 1px #000;
-    }
-
-    .testimonial-item {
-        min-width: 250px;
-    }
-
-    #blog {
-        padding: 60px 0;
-    }
-
-    #blog h2 {
-        font-size: 2rem;
-    }
-
-    #blog p {
-        font-size: 1rem;
-    }
-
-    .blog-embed iframe {
-        width: 100%;
-        height: 300px;
-    }
-
-    #contact {
-        padding: 60px 0;
-    }
-
-    #contact h2 {
-        font-size: 2rem;
-    }
-
-    #contact p {
-        font-size: 1rem;
-    }
-
-    .about-page {
-        padding: 60px 0;
-    }
-
-    .about-page h2 {
-        font-size: 4rem;
-    }
-
-    .about-block {
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .left-block, .right-block {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .about-page p {
-        font-size: 1rem;
-    }
-
-    .about-page .services-list li {
-        font-size: 1rem;
-    }
-
-    .blog-page {
-        padding: 60px 0;
-    }
-
-    .blog-page h2 {
-        font-size: 4rem;
-    }
-
-    .blog-block {
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .blog-block h3 {
-        font-size: 2rem;
-    }
-
-    .blog-block p {
-        font-size: 1rem;
-    }
-
-    .services-page {
-        padding: 60px 0;
-    }
-
-    .services-page h2 {
-        font-size: 4rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .service-block h3 {
-        font-size: 2rem;
-    }
-
-    .service-block p {
-        font-size: 1rem;
-    }
-
-    .service-icon {
-        font-size: 2rem;
-    }
-
-    .footer-nav ul li {
-        margin: 0 10px;
-    }
-
-    .social-icon {
-        font-size: 1.2rem;
-    }
-
-    .copyright {
-        font-size: 0.9rem;
-    }
 }
 
 /* Start Here Section */
@@ -1294,6 +1018,279 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .logo {
+        height: 60px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .header-contact-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    #hero {
+        height: 110vh;
+        padding-top: 140px;
+    }
+
+    .hero-content {
+        width: 80%;
+        padding-left: 20px;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+
+    #hero h2 {
+        font-size: 4rem;
+    }
+
+    #hero p {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-hashtag {
+        font-size: 1.8rem;
+        bottom: 30px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .statements {
+        right: 5%;
+        top: 48%; /* Adjusted to align with "Grow Smarter" on mobile */
+    }
+
+    .statement-item {
+        font-size: 1.2rem;
+        max-width: 400px;
+    }
+
+    #services {
+        padding: 100px 0 60px 0;
+    }
+
+    #services h2 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack services on mobile */
+        gap: 20px;
+    }
+
+    .service-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-item p {
+        font-size: 0.9rem;
+    }
+
+    .service-item .learn-more {
+        font-size: 0.9rem;
+    }
+
+    .testimonials h2 {
+        font-size: 3rem;
+    }
+
+    .testimonials .title-white {
+        -webkit-text-stroke: 1px #000;
+    }
+
+    .testimonial-item {
+        min-width: 250px;
+    }
+
+    #blog {
+        padding: 60px 0;
+    }
+
+    #blog h2 {
+        font-size: 2rem;
+    }
+
+    #blog p {
+        font-size: 1rem;
+    }
+
+    .blog-embed iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    #contact {
+        padding: 60px 0;
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact p {
+        font-size: 1rem;
+    }
+
+    #about {
+        padding: 100px 0 60px 0;
+    }
+
+    #about h1 {
+        font-size: 2.5rem;
+    }
+
+    #about h2 {
+        font-size: 1.8rem;
+    }
+
+    #about h3 {
+        font-size: 1.3rem;
+    }
+
+    #about .intro-text {
+        font-size: 1rem;
+    }
+
+    #about p,
+    #about ul,
+    #about blockquote {
+        font-size: 0.9rem;
+    }
+
+    .about-page {
+        padding: 60px 0;
+    }
+
+    .about-page h2 {
+        font-size: 4rem;
+    }
+
+    .about-block {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .left-block, .right-block {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-page p {
+        font-size: 1rem;
+    }
+
+    .about-page .services-list li {
+        font-size: 1rem;
+    }
+
+    .blog-page {
+        padding: 60px 0;
+    }
+
+    .blog-page h2 {
+        font-size: 4rem;
+    }
+
+    .blog-block {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .blog-block h3 {
+        font-size: 2rem;
+    }
+
+    .blog-block p {
+        font-size: 1rem;
+    }
+
+    #services-page {
+        padding: 150px 0 60px 0;
+    }
+
+    #services-page h1 {
+        font-size: 2.5rem;
+    }
+
+    #services-page h2 {
+        font-size: 1.8rem;
+    }
+
+    #services-page h3 {
+        font-size: 1.3rem;
+    }
+
+    #services-page .intro-text {
+        font-size: 1rem;
+    }
+
+    #services-page p,
+    #services-page ul,
+    #services-page blockquote {
+        font-size: 0.9rem;
+    }
+
+    #blog-page {
+        padding: 150px 0 60px 0;
+    }
+
+    #blog-page h1 {
+        font-size: 4rem; /* Adjusted to scale with larger desktop size */
+    }
+
+    #blog-page .intro-text {
+        font-size: 1rem;
+    }
+
+    #blog-page .substack-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    #blog-page .substack-post img {
+        height: 150px;
+    }
+
+    #blog-page .substack-post h3 {
+        font-size: 1rem;
+    }
+
+    #blog-page .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    #blog-page .cta-section p,
+    #blog-page .cta-section blockquote {
+        font-size: 0.9rem;
+    }
+
     #start-here {
         padding: 100px 0 60px 0; /* Adjusted top padding for mobile */
     }
@@ -1320,232 +1317,16 @@ footer {
     #start-here blockquote {
         font-size: 0.9rem;
     }
-}
-/* Services Section */
-#services {
-    padding: 120px 0 80px 0; /* Match the padding from #start-here and #about */
-    background-color: #e6ffe6;
-}
 
-.services-container {
-    text-align: left;
-}
-
-#services h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 20px;
-}
-
-#services .intro-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-}
-
-#services .service-section,
-#services .cta-section {
-    margin-bottom: 40px;
-}
-
-#services h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-}
-
-#services h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-#services p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-#services ul {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-#services ul li {
-    margin-bottom: 10px;
-}
-
-#services blockquote {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #1a1a1a;
-    border-left: 4px solid #00cc00;
-    padding-left: 20px;
-    margin: 20px 0;
-}
-
-#services a {
-    color: #00cc00;
-    text-decoration: none;
-}
-
-#services a:hover {
-    text-decoration: underline;
-}
-
-#services .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00cc00;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-#services .cta-button:hover {
-    background-color: #009900;
-}
-
-#services .signature-section {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    margin-top: 40px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #services {
-        padding: 100px 0 60px 0;
+    .footer-nav ul li {
+        margin: 0 10px;
     }
 
-    #services h1 {
-        font-size: 2.5rem;
+    .social-icon {
+        font-size: 1.2rem;
     }
 
-    #services h2 {
-        font-size: 1.8rem;
-    }
-
-    #services h3 {
-        font-size: 1.3rem;
-    }
-
-    #services .intro-text {
-        font-size: 1rem;
-    }
-
-    #services p,
-    #services ul,
-    #services blockquote {
-        font-size: 0.9rem;
-    }
-}
-/* Services Block (Homepage) */
-#services {
-    padding: 80px 0;
-    background-color: #fff; /* White background to contrast with other sections */
-}
-
-.services-container {
-    text-align: left; /* Match other sections */
-}
-
-#services h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem; /* Slightly smaller than main titles due to space */
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 40px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.service-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.service-item h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-}
-
-.service-item p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.service-item .learn-more {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #00cc00;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.service-item .learn-more:hover {
-    color: #009900; /* Darker shade on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #services {
-        padding: 60px 0;
-    }
-
-    #services h2 {
-        font-size: 2rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr; /* Stack services on mobile */
-        gap: 20px;
-    }
-
-    .service-item h3 {
-        font-size: 1.3rem;
-    }
-
-    .service-item p {
-        font-size: 0.9rem;
-    }
-
-    .service-item .learn-more {
+    .copyright {
         font-size: 0.9rem;
     }
 }
