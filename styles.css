@@ -247,12 +247,17 @@ nav ul li a:hover {
 /* Statements */
 div.statements#statements {
     position: absolute;
-    top: 50%;
-    right: 40px;
-    transform: translateY(-50%);
+    top: 30%; /* Moved higher */
+    right: 10%; /* Moved further left (percentage for responsiveness) */
     display: flex;
     flex-direction: column;
     gap: 30px;
+    opacity: 0; /* Start invisible */
+    transition: opacity 1s ease; /* Fade-in animation */
+}
+
+div.statements#statements.visible {
+    opacity: 1; /* Fade to visible */
 }
 
 .statement-item {
@@ -262,26 +267,7 @@ div.statements#statements {
     color: #fff;
     text-align: right;
     letter-spacing: 1px;
-    max-width: 400px;
-    position: relative;
-    white-space: nowrap; /* Prevent text wrapping during animation */
-}
-
-.statement-item::after {
-    content: '|';
-    display: inline-block;
-    animation: blink 0.7s infinite;
-    margin-left: 5px;
-}
-
-.statement-item.typing-complete::after {
-    content: ''; /* Remove cursor when typing is complete */
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    max-width: 300px; /* Reduced max-width to fit better */
 }
 
 /* Services Section */
@@ -824,12 +810,13 @@ footer {
     }
 
     .statements {
-        right: 20px;
+        right: 5%; /* Adjusted for mobile */
+        top: 25%; /* Slightly higher on mobile */
     }
 
     .statement-item {
         font-size: 1.6rem;
-        max-width: 250px;
+        max-width: 200px; /* Smaller max-width for mobile */
     }
 
     #services {
