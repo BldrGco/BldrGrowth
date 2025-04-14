@@ -112,7 +112,7 @@ nav ul li a:hover {
 #hero {
     background-color: #1a1a1a;
     color: #fff;
-    height: 150vh;
+    height: 140vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -164,7 +164,7 @@ nav ul li a:hover {
     font-weight: 400;
     color: #fff;
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -247,8 +247,8 @@ nav ul li a:hover {
 /* Statements */
 div.statements#statements {
     position: absolute;
-    top: 15%;
-    right: 10%; /* Position from the right to avoid overlap with the title */
+    top: 45%; /* Adjusted to align with "Grow Smarter" */
+    right: 10%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -265,16 +265,15 @@ div.statements#statements.visible {
     font-size: 1.8rem;
     font-weight: 400;
     color: #fff;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     letter-spacing: 1px;
-    max-width: 450px; /* Ensures one line on desktop */
+    max-width: 450px;
 }
 
-/* Removed staggering to align all statements on the left */
 .statement-item:nth-child(1),
 .statement-item:nth-child(2),
 .statement-item:nth-child(3) {
-    transform: none; /* No staggering */
+    transform: none;
 }
 
 /* Services Section */
@@ -786,7 +785,7 @@ footer {
     }
 
     #hero {
-        height: 120vh;
+        height: 110vh;
         padding-top: 140px;
     }
 
@@ -808,7 +807,7 @@ footer {
 
     .hero-hashtag {
         font-size: 1.8rem;
-        bottom: 15px;
+        bottom: 30px;
     }
 
     .button-group {
@@ -818,12 +817,12 @@ footer {
 
     .statements {
         right: 5%;
-        top: 10%;
+        top: 48%; /* Adjusted to align with "Grow Smarter" on mobile */
     }
 
     .statement-item {
         font-size: 1.2rem;
-        max-width: 400px; /* Increased to ensure one line on mobile */
+        max-width: 400px;
     }
 
     #services {
