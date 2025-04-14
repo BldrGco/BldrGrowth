@@ -397,32 +397,26 @@ div.statements#statements.visible {
 #blog {
     padding: 80px 0;
     background-color: #e6ffe6;
-    text-align: center;
+}
+
+.blog-container {
+    text-align: left; /* Left-align the container */
 }
 
 #blog h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem; /* Reduced from 3rem to prevent excessive wrapping */
+    font-size: 4rem; /* Slightly smaller than hero's 5rem due to longer text */
     font-weight: 400;
-    line-height: 1.2; /* Added for better readability */
-    margin-bottom: 40px; /* Increased from 20px to give more space before the grid */
-    color: #1a1a1a;
-    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 40px;
 }
 
-/* Remove the #blog p styles since we're no longer using a <p> tag */
-/* #blog p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-} */
-
-/* Styles for Substack posts grid */
 .substack-posts-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto; /* Keep the grid centered */
 }
 
 .substack-post {
@@ -433,11 +427,11 @@ div.statements#statements.visible {
 
 .substack-post img {
     width: 100%;
-    height: 200px; /* Fixed height to ensure square images */
-    object-fit: cover; /* Ensures images are cropped to fit */
-    aspect-ratio: 1/1; /* Forces square aspect ratio */
+    height: 200px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
     border-radius: 10px;
-    background-color: #ddd; /* Fallback color if image fails to load */
+    background-color: #ddd;
 }
 
 .substack-post h3 {
@@ -455,18 +449,28 @@ div.statements#statements.visible {
 }
 
 .substack-post a:hover h3 {
-    color: #00cc00; /* Match your brand accent color */
+    color: #00cc00;
+}
+
+/* Ensure .title-black and .title-white are defined (they might already be in your CSS) */
+.title-black {
+    color: #1a1a1a;
+}
+
+.title-white {
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .substack-posts-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
     .substack-post img {
-        height: 150px; /* Smaller images on mobile */
+        height: 150px;
     }
 
     .substack-post h3 {
@@ -478,12 +482,11 @@ div.statements#statements.visible {
     }
 
     #blog h2 {
-        font-size: 1.8rem; /* Reduced from 2rem for mobile */
+        font-size: 2rem; /* Reduced for mobile */
     }
 
-    .blog-embed iframe {
-        width: 100%;
-        height: 300px;
+    .title-white {
+        -webkit-text-stroke: 1px #000;
     }
 }
 
