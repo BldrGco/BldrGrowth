@@ -9,28 +9,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('Statements element found:', statements); // Debug: Confirm element is found
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            console.log('Intersection ratio:', entry.intersectionRatio); // Debug: Log visibility
-            if (entry.isIntersecting) {
-                console.log('Adding visible class'); // Debug: Confirm class is added
-                statements.classList.add('visible');
-                observer.disconnect(); // Stop observing once the animation triggers
-            }
-        });
-    }, {
-        root: null, // Use viewport as root
-        rootMargin: '-100px', // Delay trigger until element is 100px into the viewport
-        threshold: 0.1 // Trigger when 10% of the element is visible
+    const statementItems = statements.querySelectorAll('.statement-item');
+    if (!statementItems.length) {
+        console.error('No statement items found');
+        return;
+    }
+
+    // Store the original text in data-text attribute and clear the content
+    statementItems.forEach(item => {
+        const text = item.textContent.trim();
+        item.setAttribute('data-text', text);
+        item.textContent = ''; // Clear the initial text
     });
 
-    observer.observe(statements);
-
-    // Fallback: Add visible class after 2 seconds if observer doesn't trigger
-    setTimeout(() => {
-        if (!statements.classList.contains('visible')) {
-            console.log('Fallback: Adding visible class after delay');
-            statements.classList.add('visible');
+    // Function to animate typing for a single statement
+    function typeText(element, text, speed = 100) {
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                element.textContent = text.substring(0, i + 1);
+                i++;
+                setTimeout(type, speed);
+            } else {
+                // Remove the blinking cursor when done
+                element.classList.add('typing-complete');
+            }
         }
-    }, 2000);
+        type();
+    }
+
+    // Animate each statement with a delay between them
+    statementItems.forEach((item, index) => {
+        const text = item.getAttribute('data-text');
+        setTimeout(() => {
+            console.log(`Starting typing animation for statement ${index + 1}: ${text}`); // Debug
+            typeText(item, text, 100); // 100ms per character
+        }, index * 2000); // Delay each statement by 2 seconds
+    });
 });
