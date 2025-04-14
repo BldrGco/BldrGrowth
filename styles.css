@@ -1231,3 +1231,144 @@ footer {
         font-size: 0.9rem;
     }
 }
+/* Services Section */
+#services {
+    padding: 120px 0 80px 0; /* Match the padding from #start-here and #about */
+    background-color: #e6ffe6;
+}
+
+.services-container {
+    text-align: left;
+}
+
+#services h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+#services .intro-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+#services .service-section,
+#services .cta-section {
+    margin-bottom: 40px;
+}
+
+#services h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+#services h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#services p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#services ul {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+#services ul li {
+    margin-bottom: 10px;
+}
+
+#services blockquote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #1a1a1a;
+    border-left: 4px solid #00cc00;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+#services a {
+    color: #00cc00;
+    text-decoration: none;
+}
+
+#services a:hover {
+    text-decoration: underline;
+}
+
+#services .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00cc00;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#services .cta-button:hover {
+    background-color: #009900;
+}
+
+#services .signature-section {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #services {
+        padding: 100px 0 60px 0;
+    }
+
+    #services h1 {
+        font-size: 2.5rem;
+    }
+
+    #services h2 {
+        font-size: 1.8rem;
+    }
+
+    #services h3 {
+        font-size: 1.3rem;
+    }
+
+    #services .intro-text {
+        font-size: 1rem;
+    }
+
+    #services p,
+    #services ul,
+    #services blockquote {
+        font-size: 0.9rem;
+    }
+}
