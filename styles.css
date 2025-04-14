@@ -34,7 +34,7 @@ header {
 }
 
 .logo {
-    height: 60px; /* Increased from 40px */
+    height: 80px; /* Increased from 60px */
     width: auto;
     display: block;
 }
@@ -742,7 +742,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo {
-        height: 45px; /* Increased from 30px */
+        height: 60px; /* Increased from 45px */
     }
 
     nav {
