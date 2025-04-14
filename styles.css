@@ -247,11 +247,11 @@ nav ul li a:hover {
 /* Statements */
 div.statements#statements {
     position: absolute;
-    top: 15%; /* Moved even higher */
-    right: 10%; /* Base position */
+    top: 15%;
+    right: 10%;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Reduced gap for tighter stacking */
+    gap: 20px;
     opacity: 0;
     transition: opacity 1s ease;
 }
@@ -262,25 +262,25 @@ div.statements#statements.visible {
 
 .statement-item {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem; /* Slightly smaller font size */
+    font-size: 2rem;
     font-weight: 400;
     color: #fff;
     text-align: right;
     letter-spacing: 1px;
-    max-width: 250px; /* Further reduced to encourage shorter lines */
+    max-width: 300px; /* Increased to accommodate longer text */
 }
 
 /* Stagger each statement to the left */
 .statement-item:nth-child(1) {
-    transform: translateX(0); /* First statement */
+    transform: translateX(0);
 }
 
 .statement-item:nth-child(2) {
-    transform: translateX(-20px); /* Second statement shifted left */
+    transform: translateX(-20px);
 }
 
 .statement-item:nth-child(3) {
-    transform: translateX(-40px); /* Third statement shifted further left */
+    transform: translateX(-40px);
 }
 
 /* Services Section */
@@ -824,12 +824,12 @@ footer {
 
     .statements {
         right: 5%;
-        top: 10%; /* Even higher on mobile */
+        top: 10%;
     }
 
     .statement-item {
-        font-size: 1.4rem; /* Smaller font size on mobile */
-        max-width: 180px; /* Further reduced for mobile */
+        font-size: 1.4rem;
+        max-width: 220px; /* Adjusted for longer text on mobile */
     }
 
     .statement-item:nth-child(1) {
@@ -837,7 +837,7 @@ footer {
     }
 
     .statement-item:nth-child(2) {
-        transform: translateX(-10px); /* Smaller shift on mobile */
+        transform: translateX(-10px);
     }
 
     .statement-item:nth-child(3) {
