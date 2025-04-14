@@ -393,39 +393,39 @@ div.statements#statements.visible {
     }
 }
 
-/* Blog Section (Homepage) */
+/* Blog Section */
 #blog {
     padding: 80px 0;
     background-color: #e6ffe6;
 }
 
 .blog-container {
-    text-align: center; /* Restore centered alignment */
+    text-align: left; /* Left-align the container */
 }
 
 #blog h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 5.5rem; /* Larger than updated version */
+    font-size: 4rem; /* Slightly smaller than hero's 5rem due to longer text */
     font-weight: 400;
     line-height: 1;
-    margin-bottom: 40px; /* More spacing */
+    margin-bottom: 40px;
 }
 
-#blog .substack-posts-grid {
+.substack-posts-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto; /* Keep the grid centered */
 }
 
-#blog .substack-post {
+.substack-post {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#blog .substack-post img {
+.substack-post img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -434,7 +434,7 @@ div.statements#statements.visible {
     background-color: #ddd;
 }
 
-#blog .substack-post h3 {
+.substack-post h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
@@ -443,36 +443,50 @@ div.statements#statements.visible {
     color: #1a1a1a;
 }
 
-#blog .substack-post a {
+.substack-post a {
     text-decoration: none;
     color: inherit;
 }
 
-#blog .substack-post a:hover h3 {
+.substack-post a:hover h3 {
     color: #00cc00;
+}
+
+/* Ensure .title-black and .title-white are defined (they might already be in your CSS) */
+.title-black {
+    color: #1a1a1a;
+}
+
+.title-white {
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .substack-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .substack-post img {
+        height: 150px;
+    }
+
+    .substack-post h3 {
+        font-size: 1rem;
+    }
+
     #blog {
         padding: 60px 0;
     }
 
     #blog h2 {
-        font-size: 3rem; /* Larger on mobile than updated version */
+        font-size: 2rem; /* Reduced for mobile */
     }
 
-    #blog .substack-posts-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    #blog .substack-post img {
-        height: 150px;
-    }
-
-    #blog .substack-post h3 {
-        font-size: 1rem;
+    .title-white {
+        -webkit-text-stroke: 1px #000;
     }
 }
 
