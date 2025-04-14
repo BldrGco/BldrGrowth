@@ -393,39 +393,46 @@ div.statements#statements.visible {
     }
 }
 
-/* Blog Section */
-#blog {
-    padding: 80px 0;
+/* Blog Page Section (blog.html) */
+#blog-page {
+    padding: 180px 0 80px 0; /* Increased top padding further to fix header overlap */
     background-color: #e6ffe6;
 }
 
-.blog-container {
-    text-align: left; /* Left-align the container */
+#blog-page .blog-container {
+    text-align: left;
 }
 
-#blog h2 {
+#blog-page h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem; /* Slightly smaller than hero's 5rem due to longer text */
+    font-size: 7rem; /* Increased to make title bigger, matching homepage blog title size */
     font-weight: 400;
     line-height: 1;
+    margin-bottom: 20px;
+}
+
+#blog-page .intro-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #1a1a1a;
     margin-bottom: 40px;
 }
 
-.substack-posts-grid {
+#blog-page .substack-posts-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 960px;
-    margin: 0 auto; /* Keep the grid centered */
+    margin: 0 auto;
 }
 
-.substack-post {
+#blog-page .substack-post {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.substack-post img {
+#blog-page .substack-post img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -434,7 +441,7 @@ div.statements#statements.visible {
     background-color: #ddd;
 }
 
-.substack-post h3 {
+#blog-page .substack-post h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
@@ -443,50 +450,133 @@ div.statements#statements.visible {
     color: #1a1a1a;
 }
 
-.substack-post a {
+#blog-page .substack-post a {
     text-decoration: none;
     color: inherit;
 }
 
-.substack-post a:hover h3 {
+#blog-page .substack-post a:hover h3 {
     color: #00cc00;
 }
 
-/* Ensure .title-black and .title-white are defined (they might already be in your CSS) */
-.title-black {
-    color: #1a1a1a;
+#blog-page .cta-section {
+    margin-top: 40px;
+    text-align: center;
 }
 
-.title-white {
+#blog-page .cta-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+#blog-page .cta-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#blog-page .cta-section blockquote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #1a1a1a;
+    border-left: 4px solid #00cc00;
+    padding-left: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#blog-page .cta-section a {
+    color: #00cc00;
+    text-decoration: none;
+}
+
+#blog-page .cta-section a:hover {
+    text-decoration: underline;
+}
+
+#blog-page .cta-section .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00cc00;
     color: #fff;
-    -webkit-text-stroke: 2px #000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#blog-page .cta-section .cta-button:hover {
+    background-color: #009900;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .substack-posts-grid {
+    #services-page {
+        padding: 150px 0 60px 0;
+    }
+
+    #services-page h1 {
+        font-size: 2.5rem;
+    }
+
+    #services-page h2 {
+        font-size: 1.8rem;
+    }
+
+    #services-page h3 {
+        font-size: 1.3rem;
+    }
+
+    #services-page .intro-text {
+        font-size: 1rem;
+    }
+
+    #services-page p,
+    #services-page ul,
+    #services-page blockquote {
+        font-size: 0.9rem;
+    }
+
+    #blog-page {
+        padding: 150px 0 60px 0;
+    }
+
+    #blog-page h1 {
+        font-size: 4rem; /* Adjusted to scale with larger desktop size */
+    }
+
+    #blog-page .intro-text {
+        font-size: 1rem;
+    }
+
+    #blog-page .substack-posts-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
-    .substack-post img {
+    #blog-page .substack-post img {
         height: 150px;
     }
 
-    .substack-post h3 {
+    #blog-page .substack-post h3 {
         font-size: 1rem;
     }
 
-    #blog {
-        padding: 60px 0;
+    #blog-page .cta-section h2 {
+        font-size: 1.8rem;
     }
 
-    #blog h2 {
-        font-size: 2rem; /* Reduced for mobile */
-    }
-
-    .title-white {
-        -webkit-text-stroke: 1px #000;
+    #blog-page .cta-section p,
+    #blog-page .cta-section blockquote {
+        font-size: 0.9rem;
     }
 }
 
