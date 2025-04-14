@@ -112,7 +112,7 @@ nav ul li a:hover {
 #hero {
     background-color: #1a1a1a;
     color: #fff;
-    height: 150vh;
+    height: 200vh; /* Increased to ensure more scrolling is required */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -253,12 +253,12 @@ div.statements#statements {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    opacity: 0 !important; /* Ensure opacity starts at 0 */
-    transition: opacity 1s ease 0.2s; /* Add slight delay for visibility */
+    opacity: 0; /* Removed !important after confirming it works */
+    transition: opacity 1.5s ease; /* Increased duration for smoother effect */
 }
 
 div.statements#statements.visible {
-    opacity: 1 !important; /* Ensure opacity transitions to 1 */
+    opacity: 1;
 }
 
 .statement-item {
@@ -780,7 +780,7 @@ footer {
     }
 
     #hero {
-        height: 120vh;
+        height: 150vh; /* Adjusted for mobile */
         padding-top: 140px;
     }
 
