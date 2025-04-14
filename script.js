@@ -15,9 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log('Statements position:', statementsPosition, 'Window height:', windowHeight); // Debug: Log positions
 
-        if (statementsPosition < windowHeight * 0.75) {
+        // Adjusted trigger point to 90% of the viewport height
+        if (statementsPosition < windowHeight * 0.9) {
             console.log('Adding visible class'); // Debug: Confirm class is added
             statements.classList.add('visible');
+            // Remove the event listener after the animation triggers to improve performance
+            window.removeEventListener('scroll', handleScroll);
         }
     };
 
