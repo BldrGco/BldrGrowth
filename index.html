@@ -77,60 +77,88 @@
     </div>
 </section>
 
-<section id="blog">
-    <div class="container blog-container">
-        <h2>
-            <span class="title-black">Specialist insights, industry advice</span><br>
-            <span class="title-white">exciting updates, this blog is your guide</span>
-        </h2>
-        <div class="blog-embed">
-            <div class="substack-posts-grid">
-                <!-- Post 1 -->
-                <div class="substack-post">
-                    <a href="https://open.substack.com/pub/theintermediator/p/the-power-of-headlines-how-8-words?r=2083oh&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank">
-                        <img src="https://substack-post-media.s3.amazonaws.com/public/images/8b7c987e-8936-4610-9be4-f27f7fcda328_1080x1080.png" alt="The Power of Headlines: How 8 Words Can Hook Your Audience">
-                        <h3>The Power of Headlines: How 8 Words Can Hook Your Audience</h3>
-                    </a>
-                </div>
-                <!-- Post 2 -->
-                <div class="substack-post">
-                    <a href="https://open.substack.com/pub/theintermediator/p/confidence-isnt-a-giftits-a-skill?r=2083oh&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" target="_blank">
-                        <img src="https://substack-post-media.s3.amazonaws.com/public/images/e8c7dc0f-af34-44b3-8c27-4fd1ad2eaa95_1080x1080.png" alt="Confidence Isn’t a Gift—It’s a Skill You Build">
-                        <h3>Confidence Isn’t a Gift—It’s a Skill You Build</h3>
-                    </a>
-                </div>
-                <!-- Post 3 -->
-                <div class="substack-post">
-                    <a href="https://open.substack.com/pub/theintermediator/p/success-isnt-a-hackits-a-mindset?r=2083oh&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" target="_blank">
-                        <img src="https://substack-post-media.s3.amazonaws.com/public/images/11b7b987-8d1d-41a0-90c9-38c9ed881fd7_1080x1080.png" alt="Success Isn’t a Hack—It’s a Mindset You Master">
-                        <h3>Success Isn’t a Hack—It’s a Mindset You Master</h3>
-                    </a>
-                </div>
-                <!-- Post 4 -->
-                <div class="substack-post">
-                    <a href="https://theintermediator.substack.com/p/the-space-between-dream-and-action?r=2083oh" target="_blank">
-                        <img src="https://substack-post-media.s3.amazonaws.com/public/images/310bdc31-489f-4d3a-a1de-817d95f8c0dc_1080x1080.png" alt="The Space Between Dream and Action">
-                        <h3>The Space Between Dream and Action</h3>
-                    </a>
-                </div>
-                <!-- Post 5 -->
-                <div class="substack-post">
-                    <a href="https://theintermediator.substack.com/p/adaptability-in-numbers?r=2083oh" target="_blank">
-                        <img src="https://substack-post-media.s3.amazonaws.com/public/images/afd1d222-06cb-4efa-ba86-26d8e9f17c7b_1080x1080.png" alt="Adaptability in Numbers">
-                        <h3>Adaptability in Numbers</h3>
-                    </a>
-                </div>
-                <!-- Post 6 -->
-                <div class="substack-post">
-                    <a href="https://theintermediator.substack.com/p/execution-is-everything?r=2083oh" target="_blank">
-                        <img src="https://substack-post-media.s3.amazonaws.com/public/images/ea5873ac-cd4c-4232-be94-7e3e49b5f0ac_1080x1080.png" alt="Execution Is Everything">
-                        <h3>Execution Is Everything</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+/* Blog Section (Homepage) */
+#blog {
+    padding: 80px 0;
+    background-color: #e6ffe6;
+}
+
+.blog-container {
+    text-align: center; /* Restore centered alignment */
+}
+
+#blog h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5.5rem; /* Larger than updated version */
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 40px; /* More spacing */
+}
+
+#blog .substack-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#blog .substack-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#blog .substack-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    background-color: #ddd;
+}
+
+#blog .substack-post h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+#blog .substack-post a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#blog .substack-post a:hover h3 {
+    color: #00cc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #blog {
+        padding: 60px 0;
+    }
+
+    #blog h2 {
+        font-size: 3rem; /* Larger on mobile than updated version */
+    }
+
+    #blog .substack-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    #blog .substack-post img {
+        height: 150px;
+    }
+
+    #blog .substack-post h3 {
+        font-size: 1rem;
+    }
+}
 
     <section id="contact">
         <div class="container">
