@@ -661,17 +661,18 @@ div.statements#statements.visible {
 
 /* Blog Page */
 .blog-page {
-    padding: 100px 0;
+    padding: 200px 0; /* Increased padding-top from 100px to 200px to lower the title */
     background-color: #fff;
     min-height: 100vh;
 }
 
-.blog-page h2 {
+.blog-page h1 { /* Changed from h2 to h1 to match blog.html */
     font-family: 'Bebas Neue', sans-serif;
     font-size: 7rem;
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: 60px;
+    margin-top: 50px; /* Added to push the title down further */
     text-align: center;
 }
 
@@ -1028,11 +1029,12 @@ footer {
     }
 
     .blog-page {
-        padding: 60px 0;
+        padding: 160px 0; /* Increased padding-top from 60px to 160px for mobile */
     }
 
-    .blog-page h2 {
+    .blog-page h1 { /* Changed from h2 to h1 */
         font-size: 4rem;
+        margin-top: 40px; /* Added to push the title down further on mobile */
     }
 
     .blog-block {
