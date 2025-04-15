@@ -1237,7 +1237,7 @@ footer {
 
 /* Services Section */
 #services {
-    padding: 120px 0 80px 0; /* Match the padding from #start-here and #about */
+    padding: 200px 0 80px 0; /* Increased padding-top from 120px to 200px to lower the title */
     background-color: #e6ffe6;
 }
 
@@ -1251,6 +1251,7 @@ footer {
     font-weight: 400;
     line-height: 1;
     margin-bottom: 20px;
+    margin-top: 50px; /* Added to push the title down further */
 }
 
 #services .intro-text {
@@ -1351,11 +1352,12 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     #services {
-        padding: 100px 0 60px 0;
+        padding: 160px 0 60px 0; /* Increased padding-top from 100px to 160px for mobile */
     }
 
     #services h1 {
         font-size: 2.5rem;
+        margin-top: 40px; /* Added to push the title down further on mobile */
     }
 
     #services h2 {
