@@ -278,7 +278,7 @@ div.statements#statements.visible {
 
 /* Services Section */
 #services {
-    padding: 100px 0;
+    padding: 200px 0; /* Increased padding-top from 100px to 200px to lower the title */
     background-color: #fff;
     min-height: 120vh;
 }
@@ -289,6 +289,7 @@ div.statements#statements.visible {
     font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
+    margin-top: 30px; /* Added margin-top to push the title down further */
     color: #1a1a1a;
     letter-spacing: 2px;
 }
