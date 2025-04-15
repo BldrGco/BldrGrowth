@@ -70,6 +70,10 @@ nav ul li a:hover {
     color: #ff6b6b;
 }
 
+nav ul li a.active {
+    color: #ff6b6b;
+}
+
 .header-contact-button {
     display: inline-block;
     padding: 10px 20px;
@@ -231,7 +235,7 @@ nav ul li a:hover {
 }
 
 #contact .contact-button::before {
-    background: transparent; /* Remove the gradient rectangle */
+    background: transparent;
 }
 
 #contact .contact-button:hover {
@@ -635,7 +639,7 @@ div.statements#statements.visible {
 }
 
 #about .cta-button::before {
-    background: transparent; /* Remove the gradient rectangle */
+    background: transparent;
 }
 
 #about .cta-button:hover {
@@ -744,7 +748,7 @@ div.statements#statements.visible {
 }
 
 .blog-page .blog-button::before {
-    background: transparent; /* Remove the gradient rectangle */
+    background: transparent;
 }
 
 .blog-page .blog-button:hover {
@@ -837,7 +841,7 @@ div.statements#statements.visible {
 }
 
 .services-page .service-button::before {
-    background: transparent; /* Remove the gradient rectangle */
+    background: transparent;
 }
 
 .services-page .service-button:hover {
@@ -848,6 +852,86 @@ div.statements#statements.visible {
 .services-page .service-button:active {
     background: #ccffcc;
     box-shadow: 0 0 15px rgba(51, 255, 51, 0.8);
+}
+
+/* Terms and Conditions Page */
+.terms-page {
+    padding: 200px 0;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.terms-page h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.terms-page .title-black {
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.terms-page .title-white {
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
+}
+
+.terms-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.terms-content h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.terms-content p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.terms-content ul {
+    font-size: 1.1rem;
+    color: #333;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.terms-content ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design for Terms Page */
+@media (max-width: 768px) {
+    .terms-page {
+        padding: 160px 0;
+    }
+
+    .terms-page h1 {
+        font-size: 4rem;
+        margin-top: 40px;
+    }
+
+    .terms-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .terms-content p,
+    .terms-content ul {
+        font-size: 0.9rem;
+    }
 }
 
 /* Footer */
@@ -876,6 +960,10 @@ footer {
 }
 
 .footer-nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+.footer-nav ul li a.active {
     color: #ff6b6b;
 }
 
@@ -1132,8 +1220,7 @@ footer {
 #start-here h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 5rem;
-    font-weight: 4
-    00;
+    font-weight: 400;
     line-height: 1;
     margin-bottom: 20px;
 }
@@ -1225,7 +1312,7 @@ footer {
 }
 
 #start-here .cta-button::before {
-    background: transparent; /* Remove the gradient rectangle */
+    background: transparent;
 }
 
 #start-here .cta-button:hover {
@@ -1373,7 +1460,7 @@ footer {
 }
 
 #services .cta-button::before {
-    background: transparent; /* Remove the gradient rectangle */
+    background: transparent;
 }
 
 #services .cta-button:hover {
