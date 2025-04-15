@@ -258,17 +258,12 @@ nav ul li a.active {
 /* Statements */
 div.statements#statements {
     position: absolute;
-    top: 45%;
+    top: 40%; /* Align with the top of the hero title */
+    transform: translateY(-50%); /* Vertically center the block relative to the top position */
     right: 10%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-div.statements#statements.visible {
-    opacity: 1;
+    gap: 30px; /* Increased from 20px to 30px for more spacing */
 }
 
 .statement-item {
@@ -279,6 +274,12 @@ div.statements#statements.visible {
     text-align: left;
     letter-spacing: 1px;
     max-width: 450px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth fade-in */
+}
+
+.statement-item.visible {
+    opacity: 1; /* Fade in when .visible is added */
 }
 
 .statement-item:nth-child(1),
@@ -289,57 +290,62 @@ div.statements#statements.visible {
 
 /* Services Section */
 #services {
-    padding: 200px 0;
+    padding: 80px 0;
     background-color: #fff;
-    min-height: 120vh;
+}
+
+.services-container {
+    text-align: left;
 }
 
 #services h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 400;
-    text-align: center;
+    line-height: 1;
     margin-bottom: 40px;
-    margin-top: 30px;
-    color: #1a1a1a;
-    letter-spacing: 2px;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-bottom: 60px;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.service-card {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+.service-item {
+    display: flex;
+    flex-direction: column;
 }
 
-.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.service-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 400;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.service-card p {
+.service-item h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.service-item .learn-more {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00cc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-item .learn-more:hover {
+    color: #009900;
 }
 
 /* Testimonials */
@@ -484,8 +490,201 @@ div.statements#statements.visible {
     -webkit-text-stroke: 2px #000;
 }
 
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.footer-nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+.footer-nav ul li a.active {
+    color: #ff6b6b;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #00cc00;
+}
+
+.copyright {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .logo {
+        height: 60px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .header-contact-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    #hero {
+        height: 110vh;
+        padding-top: 140px;
+    }
+
+    .hero-content {
+        width: 80%;
+        padding-left: 20px;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+
+    #hero h2 {
+        font-size: 4rem;
+    }
+
+    #hero p {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-hashtag {
+        font-size: 1.8rem;
+        bottom: 30px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Statements on Mobile */
+    div.statements#statements {
+        position: static;
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        gap: 20px; /* Reduced gap on mobile for better fit */
+    }
+
+    .statement-item {
+        font-size: 1.2rem;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #services {
+        padding: 60px 0;
+    }
+
+    #services h2 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-item p {
+        font-size: 0.9rem;
+    }
+
+    .service-item .learn-more {
+        font-size: 0.9rem;
+    }
+
+    .testimonials h2 {
+        font-size: 3rem;
+    }
+
+    .testimonials .title-white {
+        -webkit-text-stroke: 1px #000;
+    }
+
+    .testimonial-item {
+        min-width: 250px;
+    }
+
     .substack-posts-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -507,30 +706,29 @@ div.statements#statements.visible {
         font-size: 2rem;
     }
 
-    .title-white {
-        -webkit-text-stroke: 1px #000;
+    #contact {
+        padding: 60px 0;
     }
-}
 
-/* Contact Section */
-#contact {
-    padding: 80px 0;
-    background-color: #fff;
-    text-align: center;
-}
+    #contact h2 {
+        font-size: 2rem;
+    }
 
-#contact h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-    color: #1a1a1a;
-    letter-spacing: 2px;
-}
+    #contact p {
+        font-size: 1rem;
+    }
 
-#contact p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    .footer-nav ul li {
+        margin: 0 10px;
+    }
+
+    .social-icon {
+        font-size: 1.2rem;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+    }
 }
 
 /* About Section */
@@ -934,279 +1132,6 @@ div.statements#statements.visible {
     }
 }
 
-/* Footer */
-footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.footer-nav ul {
-    list-style: none;
-    margin-bottom: 20px;
-}
-
-.footer-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.footer-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-.footer-nav ul li a:hover {
-    color: #ff6b6b;
-}
-
-.footer-nav ul li a.active {
-    color: #ff6b6b;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.social-icon {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-icon:hover {
-    color: #00cc00;
-}
-
-.copyright {
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .logo {
-        height: 60px;
-    }
-
-    header .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 5px 10px;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-    }
-
-    .header-contact-button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    #hero {
-        height: 110vh;
-        padding-top: 140px;
-    }
-
-    .hero-content {
-        width: 80%;
-        padding-left: 20px;
-        top: 40%;
-        transform: translateY(-50%);
-    }
-
-    #hero h2 {
-        font-size: 4rem;
-    }
-
-    #hero p {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-    }
-
-    .hero-hashtag {
-        font-size: 1.8rem;
-        bottom: 30px;
-    }
-
-    .button-group {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .statements {
-        right: 5%;
-        top: 48%;
-    }
-
-    .statement-item {
-        font-size: 1.2rem;
-        max-width: 400px;
-    }
-
-    #services {
-        padding: 60px 0;
-        min-height: 100vh;
-    }
-
-    #services h2 {
-        font-size: 2rem;
-    }
-
-    .services-grid {
-        margin-bottom: 40px;
-    }
-
-    .testimonials h2 {
-        font-size: 3rem;
-    }
-
-    .testimonials .title-white {
-        -webkit-text-stroke: 1px #000;
-    }
-
-    .testimonial-item {
-        min-width: 250px;
-    }
-
-    #blog {
-        padding: 60px 0;
-    }
-
-    #blog h2 {
-        font-size: 2rem;
-    }
-
-    #blog p {
-        font-size: 1rem;
-    }
-
-    .blog-embed iframe {
-        width: 100%;
-        height: 300px;
-    }
-
-    #contact {
-        padding: 60px 0;
-    }
-
-    #contact h2 {
-        font-size: 2rem;
-    }
-
-    #contact p {
-        font-size: 1rem;
-    }
-
-    .about-page {
-        padding: 60px 0;
-    }
-
-    .about-page h2 {
-        font-size: 4rem;
-    }
-
-    .about-block {
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .left-block, .right-block {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .about-page p {
-        font-size: 1rem;
-    }
-
-    .about-page .services-list li {
-        font-size: 1rem;
-    }
-
-    .blog-page {
-        padding: 160px 0;
-    }
-
-    .blog-page h1 {
-        font-size: 4rem;
-        margin-top: 40px;
-    }
-
-    .blog-block {
-        max-width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .blog-block h3 {
-        font-size: 2rem;
-    }
-
-    .blog-block p {
-        font-size: 1rem;
-    }
-
-    .services-page {
-        padding: 250px 0;
-    }
-
-    .services-page h2 {
-        font-size: 4rem;
-        margin-top: 40px;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .service-block h3 {
-        font-size: 2rem;
-    }
-
-    .service-block p {
-        font-size: 1rem;
-    }
-
-    .service-icon {
-        font-size: 2rem;
-    }
-
-    .footer-nav ul li {
-        margin: 0 10px;
-    }
-
-    .social-icon {
-        font-size: 1.2rem;
-    }
-
-    .copyright {
-        font-size: 0.9rem;
-    }
-}
-
 /* Start Here Section */
 #start-here {
     padding: 120px 0 80px 0;
@@ -1354,242 +1279,6 @@ footer {
     #start-here ul,
     #start-here ol,
     #start-here blockquote {
-        font-size: 0.9rem;
-    }
-}
-
-/* Services Section */
-#services {
-    padding: 200px 0 80px 0;
-    background-color: #e6ffe6;
-}
-
-.services-container {
-    text-align: left;
-}
-
-#services h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 20px;
-    margin-top: 50px;
-}
-
-#services .intro-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-}
-
-#services .service-section,
-#services .cta-section {
-    margin-bottom: 40px;
-}
-
-#services h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-}
-
-#services h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-#services p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-#services ul {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-#services ul li {
-    margin-bottom: 10px;
-}
-
-#services blockquote {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #1a1a1a;
-    border-left: 4px solid #00cc00;
-    padding-left: 20px;
-    margin: 20px 0;
-}
-
-#services a {
-    color: #00cc00;
-    text-decoration: none;
-}
-
-#services a:hover {
-    text-decoration: underline;
-}
-
-#services .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00cc00;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-#services .cta-button::before {
-    background: transparent;
-}
-
-#services .cta-button:hover {
-    background-color: #009900;
-}
-
-#services .signature-section {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    margin-top: 40px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #services {
-        padding: 160px 0 60px 0;
-    }
-
-    #services h1 {
-        font-size: 2.5rem;
-        margin-top: 40px;
-    }
-
-    #services h2 {
-        font-size: 1.8rem;
-    }
-
-    #services h3 {
-        font-size: 1.3rem;
-    }
-
-    #services .intro-text {
-        font-size: 1rem;
-    }
-
-    #services p,
-    #services ul,
-    #services blockquote {
-        font-size: 0.9rem;
-    }
-}
-
-/* Services Block (Homepage) */
-#services {
-    padding: 80px 0;
-    background-color: #fff;
-}
-
-.services-container {
-    text-align: left;
-}
-
-#services h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 40px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.service-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.service-item h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-}
-
-.service-item p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #1a1a1a;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.service-item .learn-more {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #00cc00;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.service-item .learn-more:hover {
-    color: #009900;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #services {
-        padding: 60px 0;
-    }
-
-    #services h2 {
-        font-size: 2rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .service-item h3 {
-        font-size: 1.3rem;
-    }
-
-    .service-item p {
-        font-size: 0.9rem;
-    }
-
-    .service-item .learn-more {
         font-size: 0.9rem;
     }
 }
