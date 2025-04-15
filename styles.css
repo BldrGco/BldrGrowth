@@ -188,6 +188,9 @@ nav ul li a:hover {
     position: relative;
     transition: background 0.3s, box-shadow 0.3s;
     z-index: 1;
+    background: #fff; /* Added to match homepage buttons */
+    color: #000; /* Added to match homepage buttons */
+    border: 2px solid transparent; /* Added to ensure no default border */
 }
 
 .cta-button::before {
@@ -197,7 +200,7 @@ nav ul li a:hover {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    border-radius: 52px;
+    border-radius: 50px; /* Adjusted to match the button's border-radius */
     background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600);
     z-index: -1;
     animation: gradient-move 3s linear infinite;
