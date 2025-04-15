@@ -733,7 +733,7 @@ div.statements#statements.visible {
 
 /* Services Page */
 .services-page {
-    padding: 220px 0; /* Increased padding-top from 200px to 220px to lower the title further */
+    padding: 300px 0; /* Increased padding-top from 220px to 300px to lower the title further */
     background-color: #fff;
     min-height: 100vh;
 }
@@ -744,7 +744,7 @@ div.statements#statements.visible {
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: 60px;
-    margin-top: 30px; /* Increased margin-top from 20px to 30px to push the title down further */
+    margin-top: 50px; /* Increased margin-top from 30px to 50px to push the title down further */
     text-align: center;
 }
 
@@ -1050,12 +1050,12 @@ footer {
     }
 
     .services-page {
-        padding: 190px 0; /* Increased padding-top from 170px to 190px for mobile */
+        padding: 250px 0; /* Increased padding-top from 190px to 250px for mobile */
     }
 
     .services-page h2 {
         font-size: 4rem;
-        margin-top: 20px; /* Increased margin-top from 10px to 20px for mobile */
+        margin-top: 40px; /* Increased margin-top from 20px to 40px for mobile */
     }
 
     .services-grid {
@@ -1390,7 +1390,7 @@ footer {
 #services h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4rem; /* Slightly smaller than main titles due to space */
-    font-weight: 4
+    font-weight: 400;
     line-height: 1;
     margin-bottom: 40px;
 }
