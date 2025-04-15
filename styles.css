@@ -188,9 +188,9 @@ nav ul li a:hover {
     position: relative;
     transition: background 0.3s, box-shadow 0.3s;
     z-index: 1;
-    background: #fff; /* Added to match homepage buttons */
-    color: #000; /* Added to match homepage buttons */
-    border: 2px solid transparent; /* Added to ensure no default border */
+    background: #fff;
+    color: #000;
+    border: 2px solid transparent;
 }
 
 .cta-button::before {
@@ -200,7 +200,7 @@ nav ul li a:hover {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    border-radius: 50px; /* Adjusted to match the button's border-radius */
+    border-radius: 50px;
     background: linear-gradient(45deg, #00cc00, #006600, #00cc00, #006600);
     z-index: -1;
     animation: gradient-move 3s linear infinite;
@@ -250,7 +250,7 @@ nav ul li a:hover {
 /* Statements */
 div.statements#statements {
     position: absolute;
-    top: 45%; /* Adjusted to align with "Grow Smarter" */
+    top: 45%;
     right: 10%;
     display: flex;
     flex-direction: column;
@@ -281,7 +281,7 @@ div.statements#statements.visible {
 
 /* Services Section */
 #services {
-    padding: 200px 0; /* Increased padding-top from 100px to 200px to lower the title */
+    padding: 200px 0;
     background-color: #fff;
     min-height: 120vh;
 }
@@ -292,7 +292,7 @@ div.statements#statements.visible {
     font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
-    margin-top: 30px; /* Added margin-top to push the title down further */
+    margin-top: 30px;
     color: #1a1a1a;
     letter-spacing: 2px;
 }
@@ -338,6 +338,7 @@ div.statements#statements.visible {
 .testimonials {
     margin-top: 60px;
     text-align: center;
+    padding-bottom: 60px; /* Added to make the section taller */
 }
 
 .testimonials h2 {
@@ -374,7 +375,7 @@ div.statements#statements.visible {
     margin: 0 15px;
     border-radius: 10px;
     min-width: 300px;
-    animation: slide-left 20s linear infinite;
+    animation: slide-right 20s linear infinite;
 }
 
 .testimonial-item p {
@@ -397,6 +398,15 @@ div.statements#statements.visible {
     }
 }
 
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 /* Blog Section */
 #blog {
     padding: 80px 0;
@@ -404,12 +414,12 @@ div.statements#statements.visible {
 }
 
 .blog-container {
-    text-align: left; /* Left-align the container */
+    text-align: left;
 }
 
 #blog h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem; /* Slightly smaller than hero's 5rem due to longer text */
+    font-size: 4rem;
     font-weight: 400;
     line-height: 1;
     margin-bottom: 40px;
@@ -420,7 +430,7 @@ div.statements#statements.visible {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 960px;
-    margin: 0 auto; /* Keep the grid centered */
+    margin: 0 auto;
 }
 
 .substack-post {
@@ -456,7 +466,7 @@ div.statements#statements.visible {
     color: #00cc00;
 }
 
-/* Ensure .title-black and .title-white are defined (they might already be in your CSS) */
+/* Ensure .title-black and .title-white are defined */
 .title-black {
     color: #1a1a1a;
 }
@@ -486,7 +496,7 @@ div.statements#statements.visible {
     }
 
     #blog h2 {
-        font-size: 2rem; /* Reduced for mobile */
+        font-size: 2rem;
     }
 
     .title-white {
@@ -541,7 +551,7 @@ div.statements#statements.visible {
 }
 
 #about .bio-section {
-    margin-bottom: 40px; /* Match the spacing of other sections */
+    margin-bottom: 40px;
 }
 
 #about .builder-section,
@@ -664,18 +674,18 @@ div.statements#statements.visible {
 
 /* Blog Page */
 .blog-page {
-    padding: 200px 0; /* Increased padding-top from 100px to 200px to lower the title */
+    padding: 200px 0;
     background-color: #fff;
     min-height: 100vh;
 }
 
-.blog-page h1 { /* Changed from h2 to h1 to match blog.html */
+.blog-page h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 7rem;
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: 60px;
-    margin-top: 50px; /* Added to push the title down further */
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -737,7 +747,7 @@ div.statements#statements.visible {
 
 /* Services Page */
 .services-page {
-    padding: 300px 0; /* Increased padding-top from 220px to 300px to lower the title further */
+    padding: 300px 0;
     background-color: #fff;
     min-height: 100vh;
 }
@@ -748,7 +758,7 @@ div.statements#statements.visible {
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: 60px;
-    margin-top: 50px; /* Increased margin-top from 30px to 50px to push the title down further */
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -942,7 +952,7 @@ footer {
 
     .statements {
         right: 5%;
-        top: 48%; /* Adjusted to align with "Grow Smarter" on mobile */
+        top: 48%;
     }
 
     .statement-item {
@@ -1032,12 +1042,12 @@ footer {
     }
 
     .blog-page {
-        padding: 160px 0; /* Increased padding-top from 60px to 160px for mobile */
+        padding: 160px 0;
     }
 
-    .blog-page h1 { /* Changed from h2 to h1 */
+    .blog-page h1 {
         font-size: 4rem;
-        margin-top: 40px; /* Added to push the title down further on mobile */
+        margin-top: 40px;
     }
 
     .blog-block {
@@ -1055,12 +1065,12 @@ footer {
     }
 
     .services-page {
-        padding: 250px 0; /* Increased padding-top from 190px to 250px for mobile */
+        padding: 250px 0;
     }
 
     .services-page h2 {
         font-size: 4rem;
-        margin-top: 40px; /* Increased margin-top from 20px to 40px for mobile */
+        margin-top: 40px;
     }
 
     .services-grid {
@@ -1095,7 +1105,7 @@ footer {
 
 /* Start Here Section */
 #start-here {
-    padding: 120px 0 80px 0; /* Increased top padding from 80px to 120px */
+    padding: 120px 0 80px 0;
     background-color: #e6ffe6;
 }
 
@@ -1213,7 +1223,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     #start-here {
-        padding: 100px 0 60px 0; /* Adjusted top padding for mobile */
+        padding: 100px 0 60px 0;
     }
 
     #start-here h1 {
@@ -1242,7 +1252,7 @@ footer {
 
 /* Services Section */
 #services {
-    padding: 200px 0 80px 0; /* Increased padding-top from 120px to 200px to lower the title */
+    padding: 200px 0 80px 0;
     background-color: #e6ffe6;
 }
 
@@ -1256,7 +1266,7 @@ footer {
     font-weight: 400;
     line-height: 1;
     margin-bottom: 20px;
-    margin-top: 50px; /* Added to push the title down further */
+    margin-top: 50px;
 }
 
 #services .intro-text {
@@ -1357,12 +1367,12 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     #services {
-        padding: 160px 0 60px 0; /* Increased padding-top from 100px to 160px for mobile */
+        padding: 160px 0 60px 0;
     }
 
     #services h1 {
         font-size: 2.5rem;
-        margin-top: 40px; /* Added to push the title down further on mobile */
+        margin-top: 40px;
     }
 
     #services h2 {
@@ -1387,16 +1397,16 @@ footer {
 /* Services Block (Homepage) */
 #services {
     padding: 80px 0;
-    background-color: #fff; /* White background to contrast with other sections */
+    background-color: #fff;
 }
 
 .services-container {
-    text-align: left; /* Match other sections */
+    text-align: left;
 }
 
 #services h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem; /* Slightly smaller than main titles due to space */
+    font-size: 4rem;
     font-weight: 400;
     line-height: 1;
     margin-bottom: 40px;
@@ -1441,7 +1451,7 @@ footer {
 }
 
 .service-item .learn-more:hover {
-    color: #009900; /* Darker shade on hover */
+    color: #009900;
 }
 
 /* Responsive Design */
@@ -1455,7 +1465,7 @@ footer {
     }
 
     .services-grid {
-        grid-template-columns: 1fr; /* Stack services on mobile */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
