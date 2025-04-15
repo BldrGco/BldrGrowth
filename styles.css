@@ -230,6 +230,10 @@ nav ul li a:hover {
     border: 2px solid transparent;
 }
 
+#contact .contact-button::before {
+    background: transparent; /* Remove the gradient rectangle */
+}
+
 #contact .contact-button:hover {
     background: #333;
 }
@@ -338,7 +342,7 @@ div.statements#statements.visible {
 .testimonials {
     margin-top: 60px;
     text-align: center;
-    padding-bottom: 60px; /* Added to make the section taller */
+    padding-bottom: 60px;
 }
 
 .testimonials h2 {
@@ -630,6 +634,10 @@ div.statements#statements.visible {
     transition: background-color 0.3s ease;
 }
 
+#about .cta-button::before {
+    background: transparent; /* Remove the gradient rectangle */
+}
+
 #about .cta-button:hover {
     background-color: #009900;
 }
@@ -735,6 +743,10 @@ div.statements#statements.visible {
     border: 2px solid transparent;
 }
 
+.blog-page .blog-button::before {
+    background: transparent; /* Remove the gradient rectangle */
+}
+
 .blog-page .blog-button:hover {
     background: #e6faff;
     box-shadow: 0 0 10px rgba(51, 255, 51, 0.6);
@@ -822,6 +834,10 @@ div.statements#statements.visible {
     border: 2px solid transparent;
     display: block;
     text-align: center;
+}
+
+.services-page .service-button::before {
+    background: transparent; /* Remove the gradient rectangle */
 }
 
 .services-page .service-button:hover {
@@ -1116,7 +1132,8 @@ footer {
 #start-here h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 5rem;
-    font-weight: 400;
+    font-weight: 4
+    00;
     line-height: 1;
     margin-bottom: 20px;
 }
@@ -1205,6 +1222,10 @@ footer {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+}
+
+#start-here .cta-button::before {
+    background: transparent; /* Remove the gradient rectangle */
 }
 
 #start-here .cta-button:hover {
@@ -1349,6 +1370,10 @@ footer {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+}
+
+#services .cta-button::before {
+    background: transparent; /* Remove the gradient rectangle */
 }
 
 #services .cta-button:hover {
