@@ -690,6 +690,73 @@ div.statements#statements {
     margin-bottom: 30px;
 }
 
+/* Contact Page */
+.contact-page {
+    padding: 200px 0 80px 0;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.contact-page h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contact-page .title-black {
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.contact-page .title-white {
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.contact-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-item .contact-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #00cc00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-item .contact-link:hover {
+    color: #009900;
+}
+
 /* Footer */
 footer {
     background-color: #1a1a1a;
@@ -967,6 +1034,32 @@ footer {
     }
 
     .waitlist-page .signature-section {
+        font-size: 0.9rem;
+    }
+
+    /* Contact Page on Mobile */
+    .contact-page {
+        padding: 160px 0 60px 0;
+    }
+
+    .contact-page h1 {
+        font-size: 4rem;
+        margin-top: 40px;
+    }
+
+    .contact-options {
+        gap: 30px;
+    }
+
+    .contact-item h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+
+    .contact-item .contact-link {
         font-size: 0.9rem;
     }
 }
