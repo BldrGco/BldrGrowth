@@ -258,12 +258,12 @@ nav ul li a.active {
 /* Statements */
 div.statements#statements {
     position: absolute;
-    top: 40%; /* Align with the top of the hero title */
-    transform: translateY(-50%); /* Vertically center the block relative to the top position */
+    top: 40%;
+    transform: translateY(-50%);
     right: 10%;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Increased from 20px to 30px for more spacing */
+    gap: 30px;
 }
 
 .statement-item {
@@ -274,12 +274,12 @@ div.statements#statements {
     text-align: left;
     letter-spacing: 1px;
     max-width: 450px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease; /* Smooth fade-in */
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 .statement-item.visible {
-    opacity: 1; /* Fade in when .visible is added */
+    opacity: 1;
 }
 
 .statement-item:nth-child(1),
@@ -350,7 +350,7 @@ div.statements#statements {
 
 /* Services Page Section */
 .services-page-section {
-    padding: 200px 0 80px 0; /* Increased top padding to 200px to clear the fixed header */
+    padding: 200px 0 80px 0;
     background-color: #fff;
     min-height: 100vh;
 }
@@ -404,6 +404,127 @@ div.statements#statements {
 
 .service-section ul li {
     margin-bottom: 10px;
+}
+
+.pillars-intro {
+    margin-bottom: 40px;
+}
+
+.pillars-intro h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.pillars-intro p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.pillar-tag {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #00cc00;
+    margin-top: 10px;
+}
+
+/* Waitlist Page */
+.waitlist-page {
+    padding: 200px 0 80px 0;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.waitlist-page h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.waitlist-page .title-black {
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.waitlist-page .title-white {
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
+}
+
+.waitlist-page .intro-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.waitlist-page .services-preview {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.waitlist-page .services-preview li {
+    margin-bottom: 10px;
+}
+
+.waitlist-page .services-preview strong {
+    color: #1a1a1a;
+}
+
+.waitlist-page .cta-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.waitlist-page .cta-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.waitlist-page .cta-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.waitlist-page .cta-section .cta-button {
+    background: #00cc00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.waitlist-page .cta-section .cta-button::before {
+    background: transparent;
+}
+
+.waitlist-page .cta-section .cta-button:hover {
+    background: #009900;
+}
+
+.waitlist-page .signature-section {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-top: 40px;
 }
 
 /* Testimonials */
@@ -697,7 +818,7 @@ footer {
         padding: 20px;
         background: rgba(0, 0, 0, 0.7);
         border-radius: 10px;
-        gap: 20px; /* Reduced gap on mobile for better fit */
+        gap: 20px;
     }
 
     .statement-item {
@@ -790,7 +911,7 @@ footer {
 
     /* Services Page Section on Mobile */
     .services-page-section {
-        padding: 160px 0 60px 0; /* Adjusted top padding to 160px for mobile */
+        padding: 160px 0 60px 0;
     }
 
     .services-page-section h1 {
@@ -804,6 +925,48 @@ footer {
 
     .service-section p,
     .service-section ul {
+        font-size: 0.9rem;
+    }
+
+    .pillars-intro h2 {
+        font-size: 1.8rem;
+    }
+
+    .pillars-intro p {
+        font-size: 0.9rem;
+    }
+
+    .pillar-tag {
+        font-size: 0.8rem;
+    }
+
+    /* Waitlist Page on Mobile */
+    .waitlist-page {
+        padding: 160px 0 60px 0;
+    }
+
+    .waitlist-page h1 {
+        font-size: 4rem;
+        margin-top: 40px;
+    }
+
+    .waitlist-page .intro-text {
+        font-size: 1rem;
+    }
+
+    .waitlist-page .services-preview {
+        font-size: 0.9rem;
+    }
+
+    .waitlist-page .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .waitlist-page .cta-section p {
+        font-size: 0.9rem;
+    }
+
+    .waitlist-page .signature-section {
         font-size: 0.9rem;
     }
 }
